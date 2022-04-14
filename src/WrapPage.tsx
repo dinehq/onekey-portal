@@ -73,14 +73,12 @@ const WrapPage: FC<WrapPageProps> = (props) => {
         htmlAttributes={{ lang: pageContext.language }}
         titleTemplate="%s"
       >
-        {/* preload vital fonts */}
-        <link
-          rel="preload"
-          as="font"
-          crossOrigin="anonymous"
-          type="font/woff2"
-          href="/fonts/StyreneA-Bold-Web.woff2"
-        />
+        <script
+          src="https://jarvis-website.onekey.so/script.js"
+          data-site="WWLGDZJB"
+          data-spa="auto"
+          defer
+        ></script>
       </Helmet>
       <Global styles={fontStyreneStyle} />
       <Global styles={fontInterStyle} />
