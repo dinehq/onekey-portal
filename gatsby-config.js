@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    // siteUrl: 'siteUrl',
+    siteUrl: 'https://google.com',
     title: 'title',
     description: 'description',
     url: 'url',
