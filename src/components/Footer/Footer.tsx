@@ -6,8 +6,6 @@ export const Footer: FC = () => {
   const [email, setEmail] = useState('');
 
   function subscribe() {
-    console.log('subscribe');
-
     revueFromSubscriptionSubmit({
       customUrl: 'http://news.onekey.so/add_subscriber',
       memberEmail: email,
