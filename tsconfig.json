@@ -19,6 +19,7 @@
     "preserveWatchOutput": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "skipLibCheck": true
   }
 }
