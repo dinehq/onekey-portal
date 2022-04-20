@@ -1048,6 +1048,11 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
+"@dinehq/revue-form-subscriber@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@dinehq/revue-form-subscriber/-/revue-form-subscriber-1.1.0.tgz#2aea54f19fab2b9185329280cece7ee9bb86ca72"
+  integrity sha512-vMiPaNTovmue6jaK61DZijKiIHY8CH8EEj+K7dHauDp+qxMZCPhKvdhUlfvsnI7St1OI2ams3WjAdy0K6ERi1g==
+
 "@emotion/babel-plugin-jsx-pragmatic@^0.1.5":
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin-jsx-pragmatic/-/babel-plugin-jsx-pragmatic-0.1.5.tgz#27debfe9c27c4d83574d509787ae553bf8a34d7e"
