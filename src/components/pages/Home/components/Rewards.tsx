@@ -1,7 +1,9 @@
 import { FC } from 'react';
 
+import { DevelopmentWrap } from '../../../base';
+
 export const Rewards: FC = () => (
-  <div>
+  <DevelopmentWrap>
     <div
       css={{
         paddingLeft: 64,
@@ -51,5 +53,5 @@ export const Rewards: FC = () => (
         />
       </div>
     </div>
-  </div>
+  </DevelopmentWrap>
 );

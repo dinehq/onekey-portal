@@ -1,7 +1,9 @@
 import { FC } from 'react';
 
+import { DevelopmentWrap } from '../../../base';
+
 export const Security: FC = () => (
-  <div>
+  <DevelopmentWrap>
     <div
       css={{
         paddingLeft: 64,
@@ -137,5 +139,5 @@ export const Security: FC = () => (
         />
       </div>
     </div>
-  </div>
+  </DevelopmentWrap>
 );

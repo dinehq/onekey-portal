@@ -1,7 +1,9 @@
 import { FC } from 'react';
 
+import { DevelopmentWrap } from '../../../base';
+
 export const Hardware: FC = () => (
-  <div>
+  <DevelopmentWrap>
     <div
       css={{
         display: 'flex',
@@ -135,5 +137,5 @@ export const Hardware: FC = () => (
         </div>
       </div>
     </div>
-  </div>
+  </DevelopmentWrap>
 );

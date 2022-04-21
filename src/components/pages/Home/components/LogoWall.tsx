@@ -1,7 +1,9 @@
 import { FC } from 'react';
 
+import { DevelopmentWrap } from '../../../base/DevelopmentWrap';
+
 export const LogoWall: FC = () => (
-  <div>
+  <DevelopmentWrap>
     <div
       css={{
         paddingLeft: 20,
@@ -52,5 +54,5 @@ export const LogoWall: FC = () => (
         />
       </div>
     </div>
-  </div>
+  </DevelopmentWrap>
 );

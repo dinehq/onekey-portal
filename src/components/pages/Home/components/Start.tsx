@@ -1,5 +1,7 @@
+import { DevelopmentWrap } from '../../../base';
+
 export const Start = () => (
-  <div>
+  <DevelopmentWrap>
     <div
       css={{
         paddingLeft: 64,
@@ -101,5 +103,5 @@ export const Start = () => (
         </div>
       </div>
     </div>
-  </div>
+  </DevelopmentWrap>
 );

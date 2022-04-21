@@ -1,7 +1,9 @@
 import { FC } from 'react';
 
+import { DevelopmentWrap } from '../../../base';
+
 export const Header: FC = () => (
-  <div>
+  <DevelopmentWrap>
     <div
       css={{
         height: '60vh',
@@ -41,5 +43,5 @@ export const Header: FC = () => (
         </span>
       </div>
     </div>
-  </div>
+  </DevelopmentWrap>
 );

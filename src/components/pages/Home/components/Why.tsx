@@ -1,7 +1,9 @@
 import { FC } from 'react';
 
+import { DevelopmentWrap } from '../../../base';
+
 export const Why: FC = () => (
-  <div>
+  <DevelopmentWrap>
     <div
       css={{
         paddingLeft: 64,
@@ -248,5 +250,5 @@ export const Why: FC = () => (
         </div>
       </div>
     </div>
-  </div>
+  </DevelopmentWrap>
 );
