@@ -5,7 +5,7 @@ exports.onCreateWebpackConfig = ({ actions, plugins }) => {
     },
     plugins: [
       plugins.define({
-        PWD: process.env.PWD,
+        PWD: JSON.stringify(process.env.PWD),
       }),
     ],
     node: {

@@ -28,6 +28,7 @@
     "@emotion/react": "^11.9.0",
     "browser-lang": "^0.1.0",
     "browser-update": "^3.3.38",
+    "framer-motion": "^6.3.0",
     "gatsby": "^4.12.1",
     "gatsby-plugin-emotion": "^7.12.1",
     "gatsby-plugin-manifest": "^4.12.1",
