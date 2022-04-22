@@ -1,11 +1,11 @@
-import { FC, useRef } from 'react';
+import React, { useRef } from 'react';
 
 interface Props {
   children?: React.ReactNode;
   path?: string;
 }
 
-export const DevelopmentWrap: FC<Props> = (props: Props) => {
+export const DevelopmentWrap: React.FC<Props> = (props: Props) => {
   const { children, path } = props;
   const ref = useRef<HTMLDivElement>(null);
   let filename = '';
