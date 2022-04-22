@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['./babel/index.js'],
+  // plugins: ['./babel/index.js'],
   presets: [
     [
       'babel-preset-gatsby',

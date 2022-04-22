@@ -14,7 +14,12 @@ import { Start } from './components/Start';
 import { Why } from './components/Why';
 
 export const Home: FC = () => (
-  <div>
+  <div
+    css={{
+      maxWidth: 1440,
+      margin: '0 auto',
+    }}
+  >
     <Nav />
     <Header />
 
