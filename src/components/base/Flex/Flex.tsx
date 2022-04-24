@@ -20,6 +20,9 @@ export interface FlexProps {
     | 'space-around'
     | 'space-evenly';
   alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
+  tablet?: any;
+  laptop?: any;
+  desktop?: any;
 }
 
 export const Flex: FC<FlexProps> = (props) => {

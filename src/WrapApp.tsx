@@ -2,6 +2,8 @@ import React, { FC } from 'react';
 
 import { ThemeProvider } from '@emotion/react';
 
+import './style/global.less';
+import './style/stabilGroteskFont.less';
 import { theme } from './theme';
 
 type WrapAppComponent = FC<{

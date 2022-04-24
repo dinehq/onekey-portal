@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Footer, Nav } from '../../base';
+import { Flex, Footer, Nav } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
 import { Hardware } from './components/Hardware';
@@ -56,5 +56,11 @@ export const Home: FC = () => (
     <FadeIn>
       <Footer />
     </FadeIn>
+
+    <Flex
+      tablet={{
+        justifyContent: 'center',
+      }}
+    />
   </div>
 );

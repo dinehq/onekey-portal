@@ -1,13 +1,9 @@
 import { FC, useEffect } from 'react';
 
-import { Global } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import { I18nextProvider } from 'react-i18next';
 
 import { createI18next } from './i18n';
-import { fontInterStyle } from './theme/fontInterStyle';
-import { fontStyreneStyle } from './theme/fontStyreneStyle';
-import { globalStyle } from './theme/globalStyle';
 import { isBrowser } from './utils';
 import { getPageLanguage } from './utils/getPageLanguage';
 
@@ -80,9 +76,6 @@ const WrapPage: FC<WrapPageProps> = (props) => {
           defer
         />
       </Helmet>
-      <Global styles={fontStyreneStyle} />
-      <Global styles={fontInterStyle} />
-      <Global styles={globalStyle} />
 
       <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
     </div>
