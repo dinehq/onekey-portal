@@ -78,7 +78,7 @@ const WrapPage: FC<WrapPageProps> = (props) => {
           data-site="WWLGDZJB"
           data-spa="auto"
           defer
-        ></script>
+        />
       </Helmet>
       <Global styles={fontStyreneStyle} />
       <Global styles={fontInterStyle} />
