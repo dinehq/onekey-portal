@@ -63,6 +63,13 @@ const tsRules = {
   ],
 };
 module.exports = {
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   env: {
     browser: true,
     es6: true,
@@ -84,6 +91,9 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       extends: ['wesbos/typescript'],
+      parserOptions: {
+        project: './tsconfig.json',
+      },
       rules: {
         ...jsRules,
         ...tsRules,
