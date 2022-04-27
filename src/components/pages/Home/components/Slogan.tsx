@@ -1,9 +1,7 @@
 import { FC } from 'react';
 
-import { DevelopmentWrap } from '../../../base';
-
 export const Slogan: FC = () => (
-  <DevelopmentWrap>
+  <div>
     <div css={{ display: 'flex', alignItems: 'center', label: 'Frame 69' }}>
       <div css={{ backgroundColor: '#ffffff', display: 'block' }}>
         <img
@@ -17,5 +15,5 @@ export const Slogan: FC = () => (
         </span>
       </div>
     </div>
-  </DevelopmentWrap>
+  </div>
 );

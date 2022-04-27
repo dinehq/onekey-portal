@@ -2,8 +2,6 @@ import { FC, useState } from 'react';
 
 import { revueFromSubscriptionSubmit } from '@dinehq/revue-form-subscriber';
 
-import { DevelopmentWrap } from '../DevelopmentWrap';
-
 export const Footer: FC = () => {
   const [email, setEmail] = useState('');
 
@@ -15,7 +13,7 @@ export const Footer: FC = () => {
   }
 
   return (
-    <DevelopmentWrap>
+    <div>
       <div
         css={{
           paddingLeft: 133,
@@ -274,6 +272,6 @@ export const Footer: FC = () => {
       <button type="button" onClick={subscribe}>
         subscribe
       </button>
-    </DevelopmentWrap>
+    </div>
   );
 };

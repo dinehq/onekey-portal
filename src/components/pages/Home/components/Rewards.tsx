@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import { DevelopmentWrap } from '../../../base';
+import {} from '../../../base';
 
 export const Rewards: FC = () => (
-  <DevelopmentWrap>
+  <div>
     <div
       css={{
         paddingLeft: 64,
@@ -53,5 +53,5 @@ export const Rewards: FC = () => (
         />
       </div>
     </div>
-  </DevelopmentWrap>
+  </div>
 );

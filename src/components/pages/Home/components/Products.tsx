@@ -1,9 +1,7 @@
 import { FC } from 'react';
 
-import { DevelopmentWrap } from '../../../base';
-
 export const Products: FC = () => (
-  <DevelopmentWrap>
+  <div>
     <div
       css={{
         paddingLeft: 87,
@@ -74,5 +72,5 @@ export const Products: FC = () => (
         </div>
       </div>
     </div>
-  </DevelopmentWrap>
+  </div>
 );
