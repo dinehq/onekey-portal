@@ -1,11 +1,15 @@
-import { FC, ReactNode } from 'react';
+import { CSSProperties, FC, ReactNode } from 'react';
 
-export interface ButtonProps {
+export interface ButtonProps extends CSSProperties {
   children: ReactNode;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-  const { children } = props;
+  const { children, ...otherProps } = props;
 
-  return <div>Button {children}</div>;
+  return (
+    <button type="button" css={{ ...otherProps }}>
+      {children}
+    </button>
+  );
 };

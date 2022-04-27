@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
-import { Flex } from '../../../base';
+import { Box, Flex } from '../../../base';
 
 export const LogoWall: FC = () => (
-  <div
-    css={{
+  <Box
+    {...{
       paddingLeft: 20,
       paddingRight: 20,
       paddingTop: 30,
@@ -52,5 +52,5 @@ export const LogoWall: FC = () => (
         css={{ width: 200, height: 80 }}
       />
     </Flex>
-  </div>
+  </Box>
 );

@@ -1,11 +1,19 @@
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
 
-export interface BoxProps {
+export interface BoxProps extends CSSProperties {
   children: React.ReactNode;
 }
 
 export const Box: FC<BoxProps> = (props) => {
-  const { children } = props;
+  const { children, ...otherProps } = props;
 
-  return <div>{children}</div>;
+  return (
+    <div
+      css={{
+        ...otherProps,
+      }}
+    >
+      {children}
+    </div>
+  );
 };
