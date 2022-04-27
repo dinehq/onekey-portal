@@ -6,7 +6,7 @@ export const Header: FC = () => (
   <DevelopmentWrap>
     <div
       css={{
-        height: '60vh',
+        height: '100vh',
         paddingLeft: 64,
         paddingRight: 64,
         paddingTop: 78,
