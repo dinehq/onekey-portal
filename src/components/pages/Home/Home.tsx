@@ -15,7 +15,19 @@ import { Why } from './components/Why';
 
 export const Home: FC = () => (
   <div>
-    <Nav />
+    <div
+      css={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: 'fit-content',
+        zIndex: 1,
+      }}
+    >
+      <Nav />
+    </div>
+
     <FadeIn>
       <Header />
     </FadeIn>

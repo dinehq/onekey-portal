@@ -11,7 +11,6 @@ export const Nav: FC<NavProps> = () => (
       paddingRight: 64,
       paddingTop: 38,
       paddingBottom: 38,
-      backgroundColor: '#ffffff',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
