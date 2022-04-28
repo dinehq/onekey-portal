@@ -5,10 +5,33 @@ export const theme = {
     transparent: 'transparent',
   },
   gradients: {},
-  fonts: {
-    PingFangSC: 'PingFang SC, sans-serif',
-    StyreneA: 'Styrene A Web, sans-serif',
-    Inter: 'Inter, sans-serif',
+  text: {},
+  font: {
+    size50: '12px',
+    size75: '14px',
+    size100: '16px',
+    size200: '18px',
+    size300: '20px',
+    size400: '24px',
+    size500: '30px',
+    size600: '36px',
+    size700: '48px',
+    size800: '60px',
+    size900: '72px',
+    size1000: '84px',
+    size1100: '96px',
+
+    weight: {
+      thin: 100,
+      ultraLight: 200,
+      light: 300,
+      regular: 400,
+      medium: 500,
+      semiBold: 600,
+      bold: 700,
+      extraBold: 800,
+      black: 900,
+    },
   },
   transitions: {
     allCubicBezier: 'all .3s cubic-bezier(.4,0,.2,1)',
@@ -61,12 +84,9 @@ export const LanguageMap = {
 export type LanguageMapKeys = keyof typeof LanguageMap;
 
 declare module '@emotion/react' {
-  export interface Theme {
-    colors: typeof theme.colors;
-    fonts: typeof theme.fonts;
-    transitions: typeof theme.transitions;
-    zIndex: typeof theme.zIndex;
-    gradients: typeof theme.gradients;
-    transforms: typeof theme.transforms;
+  type CustomTheme = typeof theme;
+
+  export interface Theme extends CustomTheme {
+    mediaBreakpoints: typeof mediaBreakpoints;
   }
 }
