@@ -44,13 +44,11 @@ export const Button: FC<ButtonProps> = (props) => {
 
   const buttonStyle: CSSProperties = {
     display: 'flex',
-    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     padding: '8px 16px',
-    fontFamily: 'Inter, sans-serif',
     fontStyle: 'normal',
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: 16,
     lineHeight: '24px',
     textAlign: 'center',
