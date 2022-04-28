@@ -11,16 +11,14 @@ import backgroundImage from './background.jpg';
 export const Header: FC = () => {
   const { ref: paddingRef, motionValue: paddingMotionValue } =
     usePositionAnimation({
-      from: 0,
-      to: 60,
-      top: 100,
+      from: 60,
+      to: 0,
     });
 
   const { ref: borderRadiusRef, motionValue: borderRadiusMotionValue } =
     usePositionAnimation({
-      from: 0,
-      to: 40,
-      top: 100,
+      from: 40,
+      to: 0,
     });
 
   const allRef = mergeRefs(borderRadiusRef, paddingRef);

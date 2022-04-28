@@ -1,27 +1,45 @@
 import { useEffect } from 'react';
 
-import { useMotionValue, useSpring } from 'framer-motion';
+import { useMotionValue, useTransform } from 'framer-motion';
 
 import { useBoundingClientRect } from './useBoundingClientRect';
 
 type Config = {
   from: number;
   to: number;
-  top: number;
+  top?: number;
+  bottom?: number;
 };
 
 export function usePositionAnimation(config: Config) {
+  const { from, to } = config;
   const { ref, rect } = useBoundingClientRect();
-  const innerMotionValue = useMotionValue(config.from);
-  const motionValue = useSpring(innerMotionValue);
+  const innerMotionValue = useMotionValue(from);
+  const elementInViewportProgress = useMotionValue(0);
+  const motionValue = useTransform(
+    elementInViewportProgress,
+    [0, 1, 2],
+    [from, to, from],
+  );
 
   useEffect(() => {
-    if (rect && rect.top < -config.top) {
-      innerMotionValue.set(config.to);
-    } else {
-      innerMotionValue.set(config.from);
+    const viewportHeight = window.innerHeight;
+
+    if (!rect) {
+      return;
     }
-  }, [config.from, config.to, config.top, innerMotionValue, rect]);
+
+    const { top: rectTop } = rect;
+
+    if (rectTop > viewportHeight) {
+      // not in viewport
+      return;
+    }
+
+    const progress = 1 - rectTop / viewportHeight;
+
+    elementInViewportProgress.set(progress);
+  }, [from, to, innerMotionValue, rect, elementInViewportProgress]);
 
   return {
     ref,
