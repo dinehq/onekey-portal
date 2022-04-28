@@ -1,38 +1,41 @@
 import { FC } from 'react';
 
-import { Logo } from '../../../base';
+import { Box, Logo } from '../../../base';
 
 export const Slogan: FC = () => (
-  <p
-    css={{
-      margin: '0 auto',
-      fontSize: 60,
-      fontWeight: 600,
-      lineHeight: '64px',
-      maxWidth: 897,
-      textAlign: 'center',
-    }}
-  >
-    <Logo
+  <Box padding={51}>
+    <p
       css={{
-        width: 64,
-        height: 64,
-        display: 'inline',
-        verticalAlign: 'bottom',
-        color: '#2EDB43',
-        marginRight: 6,
+        margin: '0 auto',
+        fontSize: 60,
+        fontWeight: 600,
+        lineHeight: '64px',
+        maxWidth: 897,
+        textAlign: 'center',
       }}
-    />
-
-    <span>
-      <span
+    >
+      <Logo
         css={{
+          width: 64,
+          height: 64,
+          display: 'inline',
+          verticalAlign: 'bottom',
           color: '#2EDB43',
+          marginRight: 6,
         }}
-      >
-        OneKey
-      </span>{' '}
-      is the smartest way to secure, buy, exchange and grow your crypto assets.
-    </span>
-  </p>
+      />
+
+      <span>
+        <span
+          css={{
+            color: '#2EDB43',
+          }}
+        >
+          OneKey
+        </span>{' '}
+        is the smartest way to secure, buy, exchange and grow your crypto
+        assets.
+      </span>
+    </p>
+  </Box>
 );
