@@ -1,5 +1,7 @@
 import { FC, ReactNode } from 'react';
 
+import { Logo } from '../Logo';
+
 export interface NavProps {
   children?: ReactNode;
 }
@@ -17,10 +19,12 @@ export const Nav: FC<NavProps> = () => (
       label: 'Navgation',
     }}
   >
-    <img
-      alt="oneKeyLogo.png"
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAYAAADj79JYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATVSURBVHgB7Z3NddtGFIU/KV5kZ2aXnaaDaJmdpwO7BKSCOBWIHcQdkB3EWWYFuQIxFQCuwHYFNJ4AyBQPMPgj5g2g+c65JEVQOA+Xj4+DwczwijDYVLqt7k2hm2qbObtv4mslIS/0rfo7rySPDwTAFf6pjRW9qe4NfhDT80Kfqsf3rBRb6K5QWugYmCSm9/h702dDMldM/kJ4JrfpoVDCwsy3hJnJQ7UjcOMt6zA6eOMN6zQ6SOP/ZFmmTVVGWeO9Y3gZWd2mv/GItD4ylm/aVEmLxjAzlmU18+ZWxoymvwOOUX5MlzISM9uT6YZYs/vogR781OM1Xr4cVsCvlB1z/zGBO5aVZSHIMhIDHKMGK6PM9EZcJeXB9Y+RVsSznxlYWhKWlVUhytBA2xWfDN0vyo/8uGTWl4Sw2Bf6o88LE3QzI2Mc2hndK8uvGwK/Q5d71sP7rhdY9LPiHePQjrtJcnbubHjsAwhwLCEY3KRnWX5eUt6iy0fWR6unIfQGji0neIhtip7KyquTgKcc7KV4S3tG/MXwpmIoiLf78yczws4Sg5uQY9/VQdY13BB7BOfkqXrUhlsic1IPUH0y/JbI3Fi5qQ3/jcjcPCZ1zHB/GLkRw+tB8JF5eawiYng02w+m0KbO8IgfNjHD/XIrhhsivnjM8BsivjDXRHyykd5CwzKQXsRvLJvXr1gOH1gBsZXiFyMZvgTD66nbMoM4P3m+7oWTszjLQgi54z6l7EvukxSGckxNphRr3+MJMrCMaRm7Zd74VmW4BHWJMmcIL9vl2IIKaM9lMYRlekpowcyAIRzTU2kWhjD0IKfnSNOKekGbOfY9OyG8+wndWMpPwelsOnm8o9/Z8geYJfYhkljVDc9wY+g3zbxrOrZ8IrSnPu5Af858QjuGYQmR4kY7y7dSw7U7hPaObTuGda5ZyjZ4G0EMFt2j946njriSkfvsGpOtWVYSyfAcPT45to0dXCpmu2YeHNAj1zY8d2x7w3hcF8Y/o8fXUNrhTUw5vXeNJNM83oMYrvkRm4sQkyiXm7qkaAXoyuKc8bjKhkGHXG6uT/9QwDi2/ct4XM2/1+jw/+kfWicEqSNAO3KfmWOfmwmxTtWzVleiGIirrIxJhMSxP82JY89aTkYxkC1u9kr7uqSypmAypWA6Z+vSfclM9tF1omQmxDhVu6aANDt2tnRjKMvFP5S1/6E6EDmr7NNm3wNHJSVNAVnFgERzDpvWXrLVNAWl3V+cMU8b+RY4Kip1BafdX5xxWdNDWG8xcQVolYOrTb9EeZEyom12nwZBMKsm7xiX7TawY+gkAfVAz4O2HTFvCHOFfnMeaKiLjDVRD+jMz56vf6ImNPYMGJ6REFamLFGGgaSgGvCSNWrygAWOUYOV4chu11KoeaFfCv1OZAiyctE9E5A+i6Vkl7a2XABDXLC9jy56bTj+JIFbGTM0oy1wjPJjdk3MdI9m1xhiTRcd8Hg2bnjZrRc5sVGZ37plmYaNVZ9rp7NjeBndAGpZ3UbCOmt7SuDTyhPWkfEyOsCyIAxln3DGckxOKb+XFr/ChqWsgXJAIRn8Bc8/s36FfyR75ATKUg6cN/i7YpNT9uTJSNZDJa9DtTUMb6NeIbS+v+H5jOPTx03kZ/ef+TH2venSnArfASlEDHNXBIgyAAAAAElFTkSuQmCC"
-      css={{ width: 45.88235092163086, height: 45.88235092163086 }}
+    <Logo
+      css={{
+        width: 45,
+        height: 45,
+        color: 'black',
+      }}
     />
     <div css={{ display: 'flex', gap: 32, alignItems: 'center' }}>
       <span css={{ fontSize: 16, color: '#101111' }}>Product</span>
