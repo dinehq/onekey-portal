@@ -16,9 +16,13 @@ import { Why } from './components/Why';
 export const Home: FC = () => (
   <div>
     <Nav />
-    <Header />
+    <FadeIn>
+      <Header />
+    </FadeIn>
 
-    <LogoWall />
+    <FadeIn>
+      <LogoWall />
+    </FadeIn>
 
     <FadeIn>
       <Slogan />
