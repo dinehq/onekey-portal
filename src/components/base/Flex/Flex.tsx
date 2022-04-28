@@ -43,11 +43,8 @@ export const Flex: FC<FlexProps> = (props) => {
     alignContent,
     alignItems,
     gap,
+    ...omittedProps,
   };
 
-  return (
-    <div css={innerStyle} {...omittedProps}>
-      {children}
-    </div>
-  );
+  return <div css={innerStyle}>{children}</div>;
 };

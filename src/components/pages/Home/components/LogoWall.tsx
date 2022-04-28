@@ -9,7 +9,6 @@ export const LogoWall: FC = () => (
       paddingRight: 20,
       paddingTop: 30,
       paddingBottom: 30,
-      backgroundColor: '#ffffff',
       display: 'flex',
       flexDirection: 'column',
       label: 'LogoWall',
