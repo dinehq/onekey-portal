@@ -1,37 +1,38 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-import { useBoundingClientRect } from '../../../../../hooks';
+import { usePositionAnimation } from '../../../../../hooks';
+import { mergeRefs } from '../../../../../utils';
 import { Box, Button, Flex } from '../../../../base';
 
 import backgroundImage from './background.jpg';
 
 export const Header: FC = () => {
-  const { ref, rect } = useBoundingClientRect();
-  const paddingValue = useMotionValue(0);
-  const padding = useSpring(paddingValue);
-  const borderRadiusValue = useMotionValue(0);
-  const borderRadius = useSpring(borderRadiusValue);
+  const { ref: paddingRef, motionValue: paddingMotionValue } =
+    usePositionAnimation({
+      from: 0,
+      to: 60,
+      top: 100,
+    });
 
-  useEffect(() => {
-    if (rect && rect.top < -100) {
-      paddingValue.set(60);
-      borderRadiusValue.set(40);
-    } else {
-      paddingValue.set(0);
-      borderRadiusValue.set(0);
-    }
-  }, [borderRadiusValue, paddingValue, rect]);
+  const { ref: borderRadiusRef, motionValue: borderRadiusMotionValue } =
+    usePositionAnimation({
+      from: 0,
+      to: 60,
+      top: 100,
+    });
+
+  const allRef = mergeRefs(borderRadiusRef, paddingRef);
 
   return (
-    <div ref={ref}>
-      <motion.div style={{ height: '100vh', padding }}>
+    <div ref={allRef}>
+      <motion.div style={{ height: '100vh', padding: paddingMotionValue }}>
         <motion.div
           style={{
             boxShadow: '0px -6px 40px rgba(0, 0, 0, 0.08)',
             height: '100%',
-            borderRadius,
+            borderRadius: borderRadiusMotionValue,
             overflow: 'hidden',
           }}
         >
