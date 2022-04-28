@@ -2,6 +2,16 @@ export { useTheme } from '@emotion/react';
 
 export const theme = {
   colors: {
+    brand50: '#EBF9EC',
+    brand100: '#D7F4DA',
+    brand200: '#A3E5A9',
+    brand300: '#67D572',
+    brand400: '#33C641',
+    brand500: '#00B812',
+    brand600: '#00930E',
+    brand700: '#006F0B',
+    brand800: '#005809',
+    brand900: '#004206',
     transparent: 'transparent',
   },
   gradients: {},
