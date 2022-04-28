@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Logo } from '../../../base';
 
 export const Slogan: FC = () => (
-  <div
+  <p
     css={{
       margin: '0 auto',
       fontSize: 60,
@@ -13,9 +13,16 @@ export const Slogan: FC = () => (
       textAlign: 'center',
     }}
   >
-    <svg css={{ width: 64, height: 64, display: 'inline', color: '#2EDB43' }}>
-      <Logo />
-    </svg>
+    <Logo
+      css={{
+        width: 64,
+        height: 64,
+        display: 'inline',
+        verticalAlign: 'bottom',
+        color: '#2EDB43',
+        marginRight: 6,
+      }}
+    />
 
     <span>
       <span
@@ -27,5 +34,5 @@ export const Slogan: FC = () => (
       </span>{' '}
       is the smartest way to secure, buy, exchange and grow your crypto assets.
     </span>
-  </div>
+  </p>
 );
