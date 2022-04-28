@@ -18,8 +18,8 @@ export function usePositionAnimation(config: Config) {
   const elementInViewportProgress = useMotionValue(0);
   const motionValue = useTransform(
     elementInViewportProgress,
-    [0, 1, 2],
-    [from, to, from],
+    [0, 0.5, 1.2, 2],
+    [from, to, to, from],
   );
 
   useEffect(() => {
