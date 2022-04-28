@@ -28,9 +28,7 @@ export const Home: FC = () => (
       <Nav />
     </div>
 
-    <FadeIn>
-      <Header />
-    </FadeIn>
+    <Header />
 
     <FadeIn>
       <LogoWall />

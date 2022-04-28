@@ -68,7 +68,9 @@ export const Header: FC = () => {
               </h1>
               <Flex {...{ gap: 20 }}>
                 <Button {...{ width: 122, height: 50 }}>Launch App</Button>
-                <Button {...{ width: 122, height: 50 }}>Go to shop</Button>
+                <Button variant="outline" {...{ width: 122, height: 50 }}>
+                  Go to shop
+                </Button>
               </Flex>
 
               <span css={{ fontSize: 12, color: '#101111' }}>
