@@ -198,53 +198,6 @@ export const Why: FC = () => (
               </div>
             </div>
           </div>
-          <div
-            css={{
-              borderWidth: 1,
-              borderStyle: 'solid',
-              borderColor: '#dadee1',
-              borderBottomLeftRadius: 32,
-              borderBottomRightRadius: 32,
-              borderTopLeftRadius: 32,
-              borderTopRightRadius: 32,
-              backgroundColor: '#f0f1f2',
-              display: 'flex',
-              flexDirection: 'column',
-            }}
-          >
-            <div
-              css={{
-                borderTopLeftRadius: 32,
-                borderTopRightRadius: 32,
-                display: 'flex',
-              }}
-            >
-              <img
-                alt="Illustration/Home4.png"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAANKCAYAAAAZQRnwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAavSURBVHgB7dAxAQAgEACh1/6d1Q7eCBFY5xm+7SEhMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjIiMiIyIjJyAZa8CpAH7SDFAAAAAElFTkSuQmCC"
-                css={{ width: 421, height: 421 }}
-              />
-            </div>
-            <div
-              css={{
-                paddingLeft: 40,
-                paddingRight: 40,
-                paddingTop: 40,
-                paddingBottom: 40,
-                display: 'flex',
-              }}
-            >
-              <div css={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-                <span css={{ fontSize: 30, color: '#101111' }}>
-                  Ultra-fast Customer Service Response
-                </span>
-                <span css={{ fontSize: 16, color: '#313638' }}>
-                  Our customer service and engineers respond rapidly to your
-                  needs.
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
