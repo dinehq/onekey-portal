@@ -50,9 +50,7 @@ export const Home: FC = () => (
       <Security />
     </FadeIn>
 
-    <FadeIn>
-      <Why />
-    </FadeIn>
+    <Why />
 
     <FadeIn>
       <Rewards />
