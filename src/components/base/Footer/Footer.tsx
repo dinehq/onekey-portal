@@ -1,16 +1,18 @@
-import { FC, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 
 import { revueFromSubscriptionSubmit } from '@dinehq/revue-form-subscriber';
+
+import { Button } from '../Button';
 
 export const Footer: FC = () => {
   const [email, setEmail] = useState('');
 
-  function subscribe() {
+  const subscribe = useCallback(() => {
     revueFromSubscriptionSubmit({
       customUrl: 'http://news.onekey.so/add_subscriber',
       memberEmail: email,
     });
-  }
+  }, [email]);
 
   return (
     <div>
@@ -25,7 +27,6 @@ export const Footer: FC = () => {
           backgroundColor: '#101111',
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'center',
           label: 'Footer',
         }}
       >
@@ -228,29 +229,23 @@ export const Footer: FC = () => {
                 alignItems: 'center',
               }}
             >
-              <span css={{ fontSize: 14, color: '#ffffff' }}>
-                Enter your email
-              </span>
-              <div
+              <input
                 css={{
-                  borderWidth: 1,
-                  borderStyle: 'solid',
-                  borderColor: '#ffffff',
-                  paddingLeft: 20,
-                  paddingRight: 20,
-                  paddingTop: 15,
-                  paddingBottom: 15,
-                  borderBottomLeftRadius: 100,
-                  borderBottomRightRadius: 100,
-                  borderTopLeftRadius: 100,
-                  borderTopRightRadius: 100,
-                  backgroundColor: '#ffffff99',
-                  display: 'flex',
-                  alignItems: 'center',
+                  fontSize: 14,
+                  backgroundColor: 'transparent',
+                  borderWidth: 0,
+                  outline: 'none',
+                  color: 'white',
+                  flex: 1,
                 }}
-              >
-                <span css={{ fontSize: 14, color: '#ffffff' }}>Subscribe</span>
-              </div>
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <Button onClick={subscribe} variant="ghost">
+                Subscribe
+              </Button>
             </div>
             <div
               css={{ height: 1, width: '100%', backgroundColor: '#ffffff' }}
@@ -263,15 +258,6 @@ export const Footer: FC = () => {
           </div>
         </div>
       </div>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <button type="button" onClick={subscribe}>
-        subscribe
-      </button>
     </div>
   );
 };

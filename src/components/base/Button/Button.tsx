@@ -6,7 +6,9 @@ import { Box, BoxProps } from '../Box';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
 
-export interface ButtonProps extends BoxProps {
+export interface ButtonProps
+  extends BoxProps,
+    Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'translate'> {
   disabled?: boolean;
   variant?: ButtonVariant;
   hasArrow?: boolean;
@@ -30,6 +32,7 @@ export const Button: FC<ButtonProps> = (props) => {
     themeColor = 'brand',
     rightIcon,
     leftIcon,
+    ...otherProps
   } = props;
 
   let color700 = '';
@@ -128,7 +131,7 @@ export const Button: FC<ButtonProps> = (props) => {
   }
 
   return (
-    <Box as="button" {...buttonStyle}>
+    <Box as="button" {...buttonStyle} {...otherProps}>
       {leftIcon && <Box marginRight={8}>{leftIcon}</Box>}
       {children}
       {rightIcon && <Box marginLeft={8}>{rightIcon}</Box>}
