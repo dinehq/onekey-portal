@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Button } from '../../../../base';
+import { Box, Button } from '../../../../base';
 
 import placeholderImage from './placeholder.png';
 
@@ -15,6 +15,7 @@ export const Products: FC = () => (
         display: 'flex',
         alignItems: 'center',
         label: 'Frame 67',
+        position: 'relative',
       }}
     >
       <div css={{ display: 'flex', gap: 200, flexGrow: 1 }}>
@@ -50,15 +51,19 @@ export const Products: FC = () => (
             </div>
           </div>
         </div>
-        <div css={{ display: 'flex', flexDirection: 'column', gap: 64 }}>
-          <div css={{ display: 'flex', flexDirection: 'column' }}>
-            <img
-              alt="cover"
-              src={placeholderImage}
-              css={{ width: 644, height: 502 }}
-            />
-          </div>
-        </div>
+
+        <Box position="relative" flex={1}>
+          <img
+            alt="cover"
+            src={placeholderImage}
+            css={{
+              top: `calc(50% - ${502 / 2}px)`,
+              position: 'sticky',
+              width: 644,
+              height: 502,
+            }}
+          />
+        </Box>
       </div>
     </div>
   </div>
