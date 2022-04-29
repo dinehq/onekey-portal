@@ -1,5 +1,7 @@
+import arrowSvg from './images/arrow.png';
+
 export const Start = () => (
-  <div>
+  <section>
     <div
       css={{
         paddingLeft: 64,
@@ -14,13 +16,26 @@ export const Start = () => (
       }}
     >
       <div css={{ display: 'flex', gap: 16, alignItems: 'flex-end' }}>
-        <span css={{ fontSize: 84, color: '#101111' }}>
-          Start Using OneKey Wallet Today
+        <span
+          css={{
+            fontSize: 84,
+            color: '#101111',
+            fontWeight: 600,
+            lineHeight: '88px',
+            label: 'title',
+          }}
+        >
+          Start Using
+          <br />
+          OneKey Wallet Today
         </span>
         <img
           alt="arrow.svg"
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAABkCAYAAABuK6XnAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOfSURBVHgB7d3PURsxFMfxt87Fw0l2BXDLLSnB3JIbHSQdkA5iOqAEOggdxOkgqSA+5rg3fELRz7YIAf9Z72r13tO+78zCcIAZ9jMyWnkkKjeZeCq/OlzL9eX9j/B5Udf1T1JUNRCoXQHtJoDdkYKGDBVTAWZQsaq6o8dHgC1JYAb1fxhdlxKxRmQ97zyMrO/OuXMSlkG9LmI5EpRB7Q5Y30hQBrW/WRhUX0hINpk4XB0mFxdhclETczaiDudoNBIxqgzqWN5fk4AM6niYAM6IOYNq0mh0RcwZVJO8f0fMGVSz3hNzFRXedoVhHh5gu00KvJ9wTtOLH1HbmzunzZuHXWJdUhrES98Wi/2htUv2N0pJBqUkg1KSQSnJoJRkUEoyKCUZlJIMSkkGpSSDUpJBKcmglGRQSjIoJRmUkgxKSQalJINSkkEpyaCUZFBKMiglGZSSDEpJBqUkg1KSQSnJoJQkEso590niMTepwp4tN52etF9LHBSQ1id9CT2TqGvrjXVVtSDvbwPW16bfJwrqCWmT2AOk2vaERLTZE+z9vCmWGKgXSLFisF4hxRpiiYDagxRTj7UXKdYAix3qCFJMLdZRpNgRLFaohkgxdViNkWIHsNigTkSKqcE6GSm2B4sFqiVSTDxWa6TYDqzsUB2RYmKxOiPFXmBlhQq/w3UCpJg4rGRIsWdY2aDWR6lV1S2lTQxWcqQYsJz7nA2qrmssm9xQ+tixekPa9Ctc91lf+gLWvDSs3pG8n+GIoOyTiZKwciHhC5bpeQlYOZEQ2wOvZqzcSIh1CUkjFgcSYl+U1YTFhYREvM2hBIsNCb0hIa1Wq8V4PK7CzZhR2nCDr2hz1OiY2lZVH8LHt5S+o0hIDBTqFasL0r+fkbpGSEgUFOoRS1qNkZA4KDQArJOQkEgoVDDWyUhILBQqEKsVEhINhQrCao2ExEOhNdbZ2QUJ+B8ZLeuEhFRAodXDw71SrM5ISA0UUoiVBAmpgkKKsJIhIXVQSAFWUiSkEgoJxkqOhNRCIYFYvSAh1VBIEFZvSEg9FBKA1SsSKgIKMWL1joSKgUIMWMuA9DEY/aGeKwoKZcQC0mVAWlKGioNCGbCyIqEioVCPWNmRULFQqAcsFiRUNBRKiMWGhIqHQgmwWJHQIKBQByx2JDQYKNQCSwQSGhQUOgFLDBIaHBRqgCUKCQ0SCh3AEoeEBguFdmCJRLK2uen0zk0mvzUc3TP41pvUBPcXoIJVxUusNzsAAAAASUVORK5CYII="
-          css={{ width: 40.000003814697266, height: 50 }}
+          src={arrowSvg}
+          css={{
+            width: 106 / 2,
+            height: 100 / 2,
+          }}
         />
       </div>
       <div css={{ display: 'flex', gap: 23, flexGrow: 1 }}>
@@ -101,5 +116,5 @@ export const Start = () => (
         </div>
       </div>
     </div>
-  </div>
+  </section>
 );

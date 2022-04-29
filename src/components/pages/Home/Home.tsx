@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Flex, Footer, Nav } from '../../base';
+import { Box, Footer, Nav } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
 import { Hardware } from './components/Hardware';
@@ -58,18 +58,14 @@ export const Home: FC = () => (
       <Rewards />
     </FadeIn>
 
-    <FadeIn>
-      <Start />
-    </FadeIn>
+    <Box backgroundColor="#f0f1f2">
+      <FadeIn>
+        <Start />
+      </FadeIn>
 
-    <FadeIn>
-      <Footer />
-    </FadeIn>
-
-    <Flex
-      tablet={{
-        justifyContent: 'center',
-      }}
-    />
+      <FadeIn>
+        <Footer />
+      </FadeIn>
+    </Box>
   </div>
 );
