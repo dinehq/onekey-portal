@@ -14,7 +14,6 @@ type Config = {
 export function usePositionAnimation(config: Config) {
   const { from, to } = config;
   const { ref, rect } = useBoundingClientRect();
-  const innerMotionValue = useMotionValue(from);
   const elementInViewportProgress = useMotionValue(0);
   const motionValue = useTransform(
     elementInViewportProgress,
@@ -39,7 +38,7 @@ export function usePositionAnimation(config: Config) {
     const progress = 1 - rectTop / viewportHeight;
 
     elementInViewportProgress.set(progress);
-  }, [from, to, innerMotionValue, rect, elementInViewportProgress]);
+  }, [from, to, rect, elementInViewportProgress]);
 
   return {
     ref,
