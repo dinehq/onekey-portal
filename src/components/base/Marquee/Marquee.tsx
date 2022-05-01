@@ -31,7 +31,7 @@ export const Marquee: FC<MarqueeProps> = (props) => {
   `;
 
     setAnimation(`${bounce} 50s linear infinite`);
-  }, []);
+  }, [children]);
 
   return (
     <div

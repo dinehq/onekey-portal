@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 export interface ItemProps {
   children?: ReactNode;
 }
-
 const itemVariants = {
   open: {
     x: 0,
@@ -29,6 +28,7 @@ export const Item: FC<ItemProps> = (props) => {
   return (
     <motion.li
       css={{
+        width: 421,
         listStyle: 'none',
       }}
       variants={itemVariants}
