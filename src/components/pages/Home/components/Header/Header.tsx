@@ -68,9 +68,9 @@ export const Header: FC = () => {
             >
               <h1
                 css={{
-                  fontSize: 48,
+                  fontSize: `${(60 / 1920) * 100}vw`,
                   fontWeight: 600,
-                  lineHeight: '60px',
+                  lineHeight: 1.3,
                   color: '#101111',
                 }}
               >
