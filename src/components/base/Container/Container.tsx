@@ -9,5 +9,14 @@ export interface ContainerProps {
 export const Container: FC<ContainerProps> = (props) => {
   const { children } = props;
 
-  return <Box>Container {children}</Box>;
+  return (
+    <Box
+      css={{
+        maxWidth: 1608,
+        margin: '0 auto',
+      }}
+    >
+      {children}
+    </Box>
+  );
 };
