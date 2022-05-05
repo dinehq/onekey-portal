@@ -18,6 +18,7 @@ export const Header: FC = () => {
 
   const { ref: borderRadiusRef, motionValue: borderRadiusMotionValue } =
     usePositionAnimation({
+      defaultProgress: 1,
       from: 40,
       to: 0,
     });
