@@ -1,8 +1,6 @@
 import { FC } from 'react';
 
-import { Box, Button, Container } from '../../../../base';
-
-import placeholderImage from './placeholder.png';
+import { Box, Button, CanvasPlayer, Container } from '../../../../base';
 
 export const Products: FC = () => (
   <Container>
@@ -53,16 +51,18 @@ export const Products: FC = () => (
         </div>
 
         <Box position="relative" flex={1}>
-          <img
-            alt="cover"
-            src={placeholderImage}
+          <Box
             css={{
               top: `calc(50% - ${502 / 2}px)`,
               position: 'sticky',
               width: 644,
               height: 502,
+              borderRadius: 24,
+              overflow: 'hidden',
             }}
-          />
+          >
+            <CanvasPlayer />
+          </Box>
         </Box>
       </div>
     </div>
