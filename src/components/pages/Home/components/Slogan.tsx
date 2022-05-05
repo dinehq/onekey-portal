@@ -15,8 +15,8 @@ export const Slogan: FC = () => (
     >
       <Logo
         css={{
-          width: 64,
-          height: 64,
+          width: `${(64 / 1400) * 100}vw`,
+          height: `${(64 / 1400) * 100}vw`,
           display: 'inline',
           verticalAlign: 'bottom',
           color: '#2EDB43',

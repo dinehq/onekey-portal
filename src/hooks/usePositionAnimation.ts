@@ -9,6 +9,7 @@ type Config = {
   to: number;
   top?: number;
   bottom?: number;
+  label?: string;
 };
 
 export function usePositionAnimation(config: Config) {
