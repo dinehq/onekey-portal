@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 
 import { usePositionAnimation } from '../../../../hooks';
-import { Button } from '../../../base';
+import { Button, Container } from '../../../base';
 
 export const Hardware: FC = () => {
   const { ref: paddingRef, motionValue: paddingMotionValue } =
@@ -13,7 +13,7 @@ export const Hardware: FC = () => {
     });
 
   return (
-    <motion.div
+    <motion.section
       style={{
         paddingRight: paddingMotionValue,
         paddingLeft: paddingMotionValue,
@@ -24,30 +24,23 @@ export const Hardware: FC = () => {
       <div
         ref={paddingRef}
         css={{
+          paddingLeft: 111,
+          paddingRight: 111,
+          paddingTop: 112,
+          paddingBottom: 112,
+          borderBottomLeftRadius: 40,
+          borderBottomRightRadius: 40,
+          borderTopLeftRadius: 40,
+          borderTopRightRadius: 40,
+          backgroundColor: '#313638',
           display: 'flex',
           flexDirection: 'column',
-          gap: 10,
-          label: 'Frame 69',
+          gap: 41,
+          flexGrow: 1,
+          alignSelf: 'stretch',
         }}
       >
-        <div
-          css={{
-            paddingLeft: 111,
-            paddingRight: 111,
-            paddingTop: 112,
-            paddingBottom: 112,
-            borderBottomLeftRadius: 40,
-            borderBottomRightRadius: 40,
-            borderTopLeftRadius: 40,
-            borderTopRightRadius: 40,
-            backgroundColor: '#313638',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 41,
-            flexGrow: 1,
-            alignSelf: 'stretch',
-          }}
-        >
+        <Container>
           <div css={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             <div css={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               <span css={{ fontSize: 24, color: '#ffffff' }}>
@@ -77,7 +70,11 @@ export const Hardware: FC = () => {
               />
               <div css={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
                 <div
-                  css={{ height: 1, width: '100%', backgroundColor: '#ffffff' }}
+                  css={{
+                    height: 1,
+                    width: '100%',
+                    backgroundColor: '#ffffff',
+                  }}
                 />
                 <div css={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   <span css={{ fontSize: 24, color: '#ffffff' }}>
@@ -104,7 +101,11 @@ export const Hardware: FC = () => {
               />
               <div css={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
                 <div
-                  css={{ height: 1, width: '100%', backgroundColor: '#ffffff' }}
+                  css={{
+                    height: 1,
+                    width: '100%',
+                    backgroundColor: '#ffffff',
+                  }}
                 />
                 <div css={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   <span css={{ fontSize: 24, color: '#ffffff' }}>
@@ -139,7 +140,11 @@ export const Hardware: FC = () => {
                 }}
               >
                 <div
-                  css={{ height: 1, width: '100%', backgroundColor: '#ffffff' }}
+                  css={{
+                    height: 1,
+                    width: '100%',
+                    backgroundColor: '#ffffff',
+                  }}
                 />
                 <div css={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   <span css={{ fontSize: 24, color: '#ffffff' }}>
@@ -153,8 +158,8 @@ export const Hardware: FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };

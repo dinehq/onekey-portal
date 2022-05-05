@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
-import { Box, Button } from '../../../../base';
+import { Box, Button, Container } from '../../../../base';
 
 import placeholderImage from './placeholder.png';
 
 export const Products: FC = () => (
-  <div>
+  <Container>
     <div
       css={{
         paddingLeft: 87,
@@ -66,5 +66,5 @@ export const Products: FC = () => (
         </Box>
       </div>
     </div>
-  </div>
+  </Container>
 );
