@@ -1,8 +1,6 @@
-import { useEffect } from 'react';
+import { useSpring, useTransform } from 'framer-motion';
 
-import { useMotionValue, useSpring, useTransform } from 'framer-motion';
-
-import { useBoundingClientRect } from './useBoundingClientRect';
+import { useElementInViewportProgress } from './useElementInViewportProgress';
 
 type Config = {
   from: number;
@@ -14,9 +12,9 @@ type Config = {
 };
 
 export function usePositionAnimation(config: Config) {
-  const { from, to, label, defaultProgress = 0 } = config;
-  const { ref, rect } = useBoundingClientRect();
-  const elementInViewportProgress = useMotionValue(defaultProgress);
+  const { from, to, defaultProgress = 0 } = config;
+  const { ref, elementInViewportProgress } =
+    useElementInViewportProgress(defaultProgress);
   const motionValue = useTransform(
     elementInViewportProgress,
     [0, 0.5, 1.2, 2],
@@ -24,25 +22,6 @@ export function usePositionAnimation(config: Config) {
   );
 
   const springValue = useSpring(motionValue);
-
-  useEffect(() => {
-    const viewportHeight = window.innerHeight;
-
-    if (!rect) {
-      return;
-    }
-
-    const { top: rectTop } = rect;
-
-    if (rectTop > viewportHeight) {
-      // not in viewport
-      return;
-    }
-
-    const progress = 1 - rectTop / viewportHeight;
-
-    elementInViewportProgress.set(progress);
-  }, [from, to, rect, elementInViewportProgress, label]);
 
   return {
     ref,

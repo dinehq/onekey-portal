@@ -50,7 +50,12 @@ export const Products: FC = () => (
           </div>
         </div>
 
-        <Box position="relative" flex={1}>
+        <Box
+          css={{
+            height: '100vh',
+            position: 'relative',
+          }}
+        >
           <Box
             css={{
               top: `calc(50% - ${502 / 2}px)`,
