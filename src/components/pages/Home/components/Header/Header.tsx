@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import { usePositionAnimation } from '../../../../../hooks';
 import { mergeRefs } from '../../../../../utils';
-import { Box, Button, Flex } from '../../../../base';
+import { Box, Button, Container, Flex } from '../../../../base';
 
 import backgroundImage from './background.jpg';
 
@@ -45,37 +45,49 @@ export const Header: FC = () => {
             paddingTop: 78,
             paddingBottom: 78,
             backgroundColor: '#e9e9e9',
-            display: 'flex',
-            alignItems: 'flex-end',
-            label: 'Headline',
             backgroundImage: `url(${backgroundImage.toString()})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
           }}
         >
-          <Flex {...{ flexDirection: 'column', gap: 20 }}>
-            <h1
-              css={{
-                fontSize: 48,
-                fontWeight: 600,
-                lineHeight: '60px',
-                color: '#101111',
+          <Container
+            xs={{
+              height: '100%',
+              position: 'relative',
+            }}
+          >
+            <Flex
+              {...{
+                position: 'absolute',
+                left: 0,
+                bottom: 0,
+                flexDirection: 'column',
+                gap: 20,
               }}
             >
-              All-in-One Crypto Wallet.
-              <br />
-              Trusted by Millions.
-            </h1>
-            <Flex {...{ gap: 20 }}>
-              <Button>Launch App</Button>
-              <Button variant="outline">Go to shop</Button>
-            </Flex>
+              <h1
+                css={{
+                  fontSize: 48,
+                  fontWeight: 600,
+                  lineHeight: '60px',
+                  color: '#101111',
+                }}
+              >
+                All-in-One Crypto Wallet.
+                <br />
+                Trusted by Millions.
+              </h1>
+              <Flex {...{ gap: 20 }}>
+                <Button>Launch App</Button>
+                <Button variant="outline">Go to shop</Button>
+              </Flex>
 
-            <span css={{ fontSize: 12, color: '#101111' }}>
-              Trustpilot score & review
-            </span>
-          </Flex>
+              <span css={{ fontSize: 12, color: '#101111' }}>
+                Trustpilot score & review
+              </span>
+            </Flex>
+          </Container>
         </Box>
       </motion.div>
     </motion.div>
