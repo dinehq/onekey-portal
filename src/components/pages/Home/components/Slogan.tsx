@@ -23,15 +23,17 @@ const itemVariants = {
   closed: {
     y: 50,
     opacity: 0,
-    transition: { duration: 0.85 },
+    transition: {
+      duration: 0.85,
+    },
   },
 };
 
 export const Slogan: FC = () => (
   <Box
     css={{
-      paddingTop: '10vh',
-      paddingBottom: '10vh',
+      paddingTop: '20vh',
+      paddingBottom: '20vh',
     }}
   >
     <motion.p
