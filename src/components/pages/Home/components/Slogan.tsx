@@ -32,8 +32,8 @@ const itemVariants = {
 export const Slogan: FC = () => (
   <Box
     css={{
-      paddingTop: '20vh',
-      paddingBottom: '20vh',
+      paddingTop: '16vh',
+      paddingBottom: '16vh',
     }}
   >
     <motion.p

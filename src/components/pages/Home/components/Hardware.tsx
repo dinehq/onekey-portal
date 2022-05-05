@@ -54,13 +54,13 @@ export const Hardware: FC = () => {
               Go to Shop
             </Button>
           </div>
-          <div css={{ display: 'flex', gap: 81, flexGrow: 1 }}>
+          <div css={{ display: 'flex', gap: 81 }}>
             <div
               css={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 20,
-                flexGrow: 1,
+                gap: 24,
+                flex: 1,
               }}
             >
               <img
@@ -91,7 +91,7 @@ export const Hardware: FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 24,
-                flexGrow: 1,
+                flex: 1,
               }}
             >
               <img
@@ -123,7 +123,7 @@ export const Hardware: FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 24,
-                flexGrow: 1,
+                flex: 1,
               }}
             >
               <img
