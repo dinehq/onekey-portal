@@ -7,8 +7,6 @@ export const Start = () => (
     <Container>
       <div
         css={{
-          paddingLeft: 64,
-          paddingRight: 64,
           paddingTop: 164,
           paddingBottom: 164,
           backgroundColor: '#f0f1f2',
