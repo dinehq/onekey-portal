@@ -11,6 +11,7 @@ import backgroundImage from './background.jpg';
 export const Header: FC = () => {
   const { ref: paddingRef, motionValue: paddingMotionValue } =
     usePositionAnimation({
+      defaultProgress: 1,
       from: 60,
       to: 0,
     });

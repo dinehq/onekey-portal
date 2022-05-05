@@ -10,12 +10,13 @@ type Config = {
   top?: number;
   bottom?: number;
   label?: string;
+  defaultProgress?: number;
 };
 
 export function usePositionAnimation(config: Config) {
-  const { from, to } = config;
+  const { from, to, label, defaultProgress = 0 } = config;
   const { ref, rect } = useBoundingClientRect();
-  const elementInViewportProgress = useMotionValue(0);
+  const elementInViewportProgress = useMotionValue(defaultProgress);
   const motionValue = useTransform(
     elementInViewportProgress,
     [0, 0.5, 1.2, 2],
@@ -41,7 +42,7 @@ export function usePositionAnimation(config: Config) {
     const progress = 1 - rectTop / viewportHeight;
 
     elementInViewportProgress.set(progress);
-  }, [from, to, rect, elementInViewportProgress]);
+  }, [from, to, rect, elementInViewportProgress, label]);
 
   return {
     ref,
