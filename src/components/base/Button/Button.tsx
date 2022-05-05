@@ -75,7 +75,7 @@ export const Button: FC<ButtonProps> = (props) => {
       ':hover': {
         background: color700,
       },
-      activeStyle: {
+      ':active': {
         background: color900,
       },
     };
@@ -89,7 +89,7 @@ export const Button: FC<ButtonProps> = (props) => {
       ':hover': {
         color: color700,
       },
-      activeStyle: {
+      ':active': {
         color: color900,
       },
     };
@@ -106,7 +106,7 @@ export const Button: FC<ButtonProps> = (props) => {
         color: color700,
         borderColor: color700,
       },
-      activeStyle: {
+      ':active': {
         color: color900,
         borderColor: color900,
       },
@@ -121,7 +121,7 @@ export const Button: FC<ButtonProps> = (props) => {
       ':hover': {
         color: color700,
       },
-      activeStyle: {
+      ':active': {
         color: color900,
         background: theme.colors.gray400,
       },
