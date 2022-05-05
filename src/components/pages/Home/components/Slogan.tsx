@@ -7,10 +7,9 @@ export const Slogan: FC = () => (
     <p
       css={{
         margin: '0 auto',
-        fontSize: 60,
+        fontSize: `${(60 / 1400) * 100}vw`,
         fontWeight: 600,
-        lineHeight: '64px',
-        maxWidth: 897,
+        lineHeight: 1,
         textAlign: 'center',
       }}
     >
@@ -33,8 +32,8 @@ export const Slogan: FC = () => (
         >
           OneKey
         </span>{' '}
-        is the smartest way to secure, buy, exchange and grow your crypto
-        assets.
+        is the smartest way <br /> to secure, buy, exchange and <br /> grow your
+        crypto assets.
       </span>
     </p>
   </Box>

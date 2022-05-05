@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { useMotionValue, useTransform } from 'framer-motion';
+import { useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 import { useBoundingClientRect } from './useBoundingClientRect';
 
@@ -20,6 +20,8 @@ export function usePositionAnimation(config: Config) {
     [0, 0.5, 1.2, 2],
     [from, to, to, from],
   );
+
+  const springValue = useSpring(motionValue);
 
   useEffect(() => {
     const viewportHeight = window.innerHeight;
@@ -43,5 +45,6 @@ export function usePositionAnimation(config: Config) {
   return {
     ref,
     motionValue,
+    springValue,
   };
 }
