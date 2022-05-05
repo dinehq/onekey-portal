@@ -1,10 +1,16 @@
-import { useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 
 import { AnimatedSprite } from 'pixi.js';
 
 import { init } from './CanvasKeyframes';
 
-export function CanvasPlayer() {
+interface CanvasPlayerProps {
+  frame: number;
+}
+
+export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
+  const { frame } = props;
+
   // canvas ref
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -26,6 +32,16 @@ export function CanvasPlayer() {
     return () => {};
   }, []);
 
+  useEffect(() => {
+    const animatedSprite = animatedSpriteRef.current;
+
+    console.log('frame', frame);
+
+    if (animatedSprite) {
+      animatedSprite.gotoAndStop(frame);
+    }
+  }, [frame]);
+
   return (
     <div
       style={{
@@ -46,4 +62,4 @@ export function CanvasPlayer() {
       </button> */}
     </div>
   );
-}
+};
