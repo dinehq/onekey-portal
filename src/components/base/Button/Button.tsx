@@ -131,7 +131,7 @@ export const Button: FC<ButtonProps> = (props) => {
   }
 
   return (
-    <Box as="button" {...buttonStyle} {...otherProps}>
+    <Box as="button" css={buttonStyle} {...otherProps}>
       {leftIcon && <Box marginRight={8}>{leftIcon}</Box>}
       {children}
       {rightIcon && <Box marginLeft={8}>{rightIcon}</Box>}

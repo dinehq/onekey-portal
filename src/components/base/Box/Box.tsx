@@ -7,7 +7,7 @@ import { clearStyleProps, filterStyleProps } from './utils';
 export interface BoxProps extends CSSProperties {
   children?: React.ReactNode;
   as?: string;
-  css?: Interpolation<Theme>;
+  css?: Interpolation<Theme> | CSSProperties;
 }
 
 export const Box: FC<BoxProps> = (props) => {
