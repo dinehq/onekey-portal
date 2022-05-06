@@ -8,10 +8,11 @@ export interface BoxProps extends CSSProperties {
   children?: React.ReactNode;
   as?: string;
   css?: Interpolation<Theme> | CSSProperties;
+  xs?: Interpolation<Theme> | CSSProperties;
 }
 
 export const Box: FC<BoxProps> = (props) => {
-  const { children, as = 'div', css = {}, ...otherProps } = props;
+  const { children, as = 'div', css = {}, xs = {}, ...otherProps } = props;
 
   const innerCSSProps = filterStyleProps(otherProps);
   const normalProps = clearStyleProps(otherProps);
@@ -23,6 +24,8 @@ export const Box: FC<BoxProps> = (props) => {
         ...innerCSSProps,
         // @ts-ignore
         ...css,
+        // @ts-ignore
+        ...xs,
       },
       ...normalProps,
     },
