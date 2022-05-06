@@ -17,7 +17,7 @@ export const Nav: FC<NavProps> = () => {
   const { scrollY } = useViewportScroll();
   const y = useTransform(scrollY, [0, 100], [38, 16]);
   const backgroundColor = useTransform(scrollY, (value: number) => {
-    const opacity = value > 90 ? 0.9 : value / 90;
+    const opacity = value > 90 ? 0.9 : value / 100;
 
     return `rgba(255, 255, 255, ${opacity})`;
   });
