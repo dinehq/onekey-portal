@@ -1,11 +1,29 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 
-export interface RoundCursorProps {
-  children?: ReactNode;
-}
+import { Box, BoxProps } from '../Box';
+
+import cursorSvg from './cursor.svg';
+
+export type RoundCursorProps = BoxProps;
 
 export const RoundCursor: FC<RoundCursorProps> = (props) => {
   const { children } = props;
 
-  return <div>RoundCursor {children}</div>;
+  return (
+    <Box
+      xs={{
+        backgroundImage: `url(${cursorSvg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '100%',
+        userSelect: 'none',
+        pointerEvents: 'none',
+        willChange: 'transform',
+      }}
+    >
+      {children}
+    </Box>
+  );
 };

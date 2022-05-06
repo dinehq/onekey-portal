@@ -27,6 +27,7 @@
   "dependencies": {
     "@dinehq/revue-form-subscriber": "^1.1.0",
     "@emotion/react": "^11.9.0",
+    "@react-hook/mouse-position": "^4.1.3",
     "browser-lang": "^0.1.0",
     "browser-update": "^3.3.38",
     "click-to-react-component": "^1.0.6",
