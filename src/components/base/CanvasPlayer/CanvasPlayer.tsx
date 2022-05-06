@@ -35,8 +35,6 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
   useEffect(() => {
     const animatedSprite = animatedSpriteRef.current;
 
-    console.log('frame', frame);
-
     if (animatedSprite) {
       animatedSprite.gotoAndStop(frame);
     }
