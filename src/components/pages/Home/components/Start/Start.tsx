@@ -40,6 +40,10 @@ export const Start = () => {
       width: 30,
       x: mouseXPosition,
       y: mouseYPosition,
+      transition: {
+        type: 'spring',
+        mass: 0.6,
+      },
     },
     item: {
       opacity: 1,
