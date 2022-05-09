@@ -3,15 +3,18 @@ import { FC } from 'react';
 import { Box, Footer, Nav } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
-import { Hardware } from './components/Hardware';
-import { Header } from './components/Header';
-import { LogoWall } from './components/LogoWall';
-import { Products } from './components/Products';
-import { Rewards } from './components/Rewards';
-import { Security } from './components/Security';
-import { Slogan } from './components/Slogan';
-import { Start } from './components/Start';
-import { Why } from './components/Why';
+import {
+  Feature,
+  Hardware,
+  Header,
+  LogoWall,
+  Products,
+  Rewards,
+  Security,
+  Slogan,
+  Start,
+  Why,
+} from './components';
 
 export const Home: FC = () => (
   <div>
@@ -49,6 +52,8 @@ export const Home: FC = () => (
     <FadeIn>
       <Security />
     </FadeIn>
+
+    <Feature />
 
     <Why />
 
