@@ -35,8 +35,6 @@ export function init(
   const loader = new Loader();
 
   for (const image of images) {
-    console.log(image);
-
     loader.add(image);
   }
 
