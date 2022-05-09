@@ -21,6 +21,9 @@ export const theme = {
     brand900: '#004206',
     transparent: 'transparent',
   },
+  background: {
+    test100: 'linear-gradient(0deg, #F0F1F2, #F0F1F2), #EEEEEE',
+  },
   gradients: {},
   text: {},
   font: {
