@@ -80,7 +80,14 @@ export const Products: FC = () => {
                   overflow: 'hidden',
                 }}
               >
-                <CanvasPlayer frame={parseInt(motionValue.get().toFixed(0))} />
+                <CanvasPlayer
+                  width={1288}
+                  height={1004}
+                  images={new Array(60)
+                    .fill(0)
+                    .map((_, i) => `/canvas/image${i}.jpg`)}
+                  frame={parseInt(motionValue.get().toFixed(0))}
+                />
               </Box>
             </Box>
           </div>

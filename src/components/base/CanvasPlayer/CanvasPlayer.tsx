@@ -6,10 +6,16 @@ import { init } from './CanvasKeyframes';
 
 interface CanvasPlayerProps {
   frame: number;
+  // all image url array
+  images: string[];
+  width: number;
+  height: number;
 }
 
 export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
-  const { frame } = props;
+  const { frame, images, width, height } = props;
+  // is initialized
+  const isInitialized = useRef(false);
 
   // canvas ref
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -20,17 +26,27 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
   useEffect(() => {
     const canvas = canvasRef.current;
 
-    if (canvas) {
-      init(canvas, ({ animatedSprite }) => {
-        animatedSprite.gotoAndStop(0);
+    if (canvas && images && !isInitialized.current) {
+      isInitialized.current = true;
 
-        // @ts-ignore
-        animatedSpriteRef.current = animatedSprite;
-      });
+      init(
+        {
+          element: canvas,
+          images,
+          width,
+          height,
+        },
+        ({ animatedSprite }) => {
+          animatedSprite.gotoAndStop(0);
+
+          // @ts-ignore
+          animatedSpriteRef.current = animatedSprite;
+        },
+      );
     }
 
     return () => {};
-  }, []);
+  }, [images, width, height]);
 
   useEffect(() => {
     const animatedSprite = animatedSpriteRef.current;
