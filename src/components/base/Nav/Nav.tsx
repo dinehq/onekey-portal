@@ -36,6 +36,9 @@ export const Nav: FC<NavProps> = () => {
         left: 0,
         right: 0,
         transition: 'all 0.3s ease-in-out',
+        ':hover': {
+          backgroundColor: 'white',
+        },
       }}
     >
       <motion.div
