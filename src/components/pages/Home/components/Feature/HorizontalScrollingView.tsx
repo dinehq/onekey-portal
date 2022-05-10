@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
 
+import { useTheme } from '@emotion/react';
 import { MotionValue, motion, useTransform } from 'framer-motion';
 
 import { Box } from '../../../../base';
@@ -12,6 +13,7 @@ export interface HorizontalScrollingViewProps {
 export const HorizontalScrollingView: FC<HorizontalScrollingViewProps> = (
   props,
 ) => {
+  const theme = useTheme();
   const { children, progress } = props;
 
   const x = useTransform(progress, (value) => (value - 1.5) * -600);
@@ -26,6 +28,7 @@ export const HorizontalScrollingView: FC<HorizontalScrollingViewProps> = (
     >
       <motion.div
         style={{
+          transition: theme.transitions.motion,
           x,
         }}
       >

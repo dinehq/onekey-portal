@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Box, Footer, Navigation } from '../../base';
+import { Box, Navigation, PageFooter } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
 import {
@@ -67,7 +67,7 @@ export const Home: FC = () => (
       </FadeIn>
 
       <FadeIn>
-        <Footer />
+        <PageFooter />
       </FadeIn>
     </Box>
   </div>
