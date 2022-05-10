@@ -23,6 +23,7 @@ export const theme = {
   },
   background: {
     test100: 'linear-gradient(0deg, #F0F1F2, #F0F1F2), #EEEEEE',
+    test500: '#101111',
   },
   gradients: {},
   text: {},
