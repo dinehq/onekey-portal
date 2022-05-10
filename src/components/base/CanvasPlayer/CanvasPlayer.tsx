@@ -1,6 +1,6 @@
 import { FC, useEffect, useRef } from 'react';
 
-import { AnimatedSprite } from 'pixi.js';
+import { AnimatedSprite, Application } from 'pixi.js';
 
 import { init } from './CanvasKeyframes';
 
@@ -16,6 +16,7 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
   const { frame, images, width, height } = props;
   // is initialized
   const isInitialized = useRef(false);
+  const application = useRef<Application | null>(null);
 
   // canvas ref
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -26,10 +27,10 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
   useEffect(() => {
     const canvas = canvasRef.current;
 
-    if (canvas && images && !isInitialized.current) {
+    if (canvas && images && !isInitialized.current && !application.current) {
       isInitialized.current = true;
 
-      init(
+      application.current = init(
         {
           element: canvas,
           images,

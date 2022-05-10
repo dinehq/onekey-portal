@@ -16,7 +16,7 @@ type Config = {
 export function init(
   config: Config,
   onLoad: (arg0: { app: Application; animatedSprite: AnimatedSprite }) => void,
-) {
+): Application {
   const { element, width, height, images } = config;
 
   const app = new Application({
@@ -66,4 +66,6 @@ export function init(
       animatedSprite,
     });
   });
+
+  return app;
 }
