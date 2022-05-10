@@ -39,7 +39,7 @@ export const Feature: FC<FeatureProps> = () => {
 
       <Box
         xs={{
-          height: '200vh',
+          height: '300vh',
           width: 100,
         }}
       />
