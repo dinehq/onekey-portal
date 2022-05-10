@@ -26,7 +26,13 @@ export const theme = {
     test500: '#101111',
   },
   gradients: {},
-  text: {},
+  text: {
+    medium300: {
+      fontWeight: 600,
+      fontSize: 16,
+      lineHeight: '20px',
+    },
+  },
   font: {
     size50: '12px',
     size75: '14px',

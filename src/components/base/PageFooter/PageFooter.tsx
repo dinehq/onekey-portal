@@ -5,7 +5,7 @@ import { revueFromSubscriptionSubmit } from '@dinehq/revue-form-subscriber';
 import { Button } from '../Button';
 import { Container } from '../Container';
 
-export const Footer: FC = () => {
+export const PageFooter: FC = () => {
   const [email, setEmail] = useState('');
 
   const subscribe = useCallback(() => {

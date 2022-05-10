@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Box, Footer, Nav } from '../../base';
+import { Box, Footer, Navigation } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
 import {
@@ -28,7 +28,7 @@ export const Home: FC = () => (
         zIndex: 1,
       }}
     >
-      <Nav />
+      <Navigation />
     </div>
 
     <Header />
