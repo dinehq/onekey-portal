@@ -16,9 +16,9 @@ export function useBoundingClientRect() {
       }
     }
 
-    setTimeout(() => {
+    setInterval(() => {
       update();
-    }, 200);
+    }, 100);
 
     window.addEventListener('resize', update);
     window.addEventListener('scroll', update);

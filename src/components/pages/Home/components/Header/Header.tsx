@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import { useTheme } from '@emotion/react';
 import { motion } from 'framer-motion';
 
 import { usePositionAnimation } from '../../../../../hooks';
@@ -9,6 +10,7 @@ import { Box, Button, Container, Flex } from '../../../../base';
 import backgroundImage from './background.jpg';
 
 export const Header: FC = () => {
+  const theme = useTheme();
   const { ref: paddingRef, motionValue: paddingMotionValue } =
     usePositionAnimation({
       defaultProgress: 1,
@@ -28,7 +30,11 @@ export const Header: FC = () => {
   return (
     <motion.div
       ref={allRef}
-      style={{ height: '100vh', padding: paddingMotionValue }}
+      style={{
+        transition: theme.transitions.motion,
+        height: '100vh',
+        padding: paddingMotionValue,
+      }}
     >
       <motion.div
         style={{

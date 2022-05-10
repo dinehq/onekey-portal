@@ -66,6 +66,7 @@ export const theme = {
     allEaseIn: 'all .3s ease-in',
     allEase: 'all .3s ease',
     allLinear: 'all .3s linear',
+    motion: 'all 0.1s linear',
   },
   transforms: {
     rotate180: 'rotate(180deg)',
