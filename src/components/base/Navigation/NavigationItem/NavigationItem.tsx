@@ -17,6 +17,9 @@ export const NavigationItem: FC<NavigationItemProps> = (props) => {
       xs={{
         color: theme.background.test500,
         ...theme.text.medium300,
+        ':hover': {
+          opacity: 0.5,
+        },
       }}
     >
       {children}
