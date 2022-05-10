@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 
 import { useTheme } from '@emotion/react';
 
-import { Box, Nav } from '../Box';
+import { Box, Li, Nav, Ul } from '../Box';
 import { Button } from '../Button';
 import { Container } from '../Container';
 import { Logo } from '../Logo';
@@ -54,19 +54,25 @@ export const Navigation: FC<NavigationProps> = () => {
             }}
           />
 
-          <Box xs={{ display: 'flex', gap: 32, alignItems: 'center' }}>
+          <Ul xs={{ display: 'flex', gap: 32, alignItems: 'center' }}>
             {data.map((item) => (
-              <NavigationItem key={item.name}>{item.name}</NavigationItem>
+              <Li
+                xs={{
+                  listStyle: 'none',
+                }}
+              >
+                <NavigationItem key={item.name}>{item.name}</NavigationItem>
+              </Li>
             ))}
 
-            <div css={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+            <Box css={{ display: 'flex', gap: 8, alignItems: 'center' }}>
               <img
                 alt="languageIcon.png"
                 src={languageIcon}
                 css={{ width: 24, height: 24 }}
               />
               <NavigationItem>English</NavigationItem>
-            </div>
+            </Box>
 
             <Button
               variant="outline"
@@ -81,7 +87,7 @@ export const Navigation: FC<NavigationProps> = () => {
             >
               Launch App
             </Button>
-          </Box>
+          </Ul>
         </Container>
       </NavigationAnimationWrap>
     </Nav>
