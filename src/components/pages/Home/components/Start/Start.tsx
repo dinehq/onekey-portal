@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 
+import { useTheme } from '@emotion/react';
 import useMouse from '@react-hook/mouse-position';
 import { motion } from 'framer-motion';
 
@@ -18,6 +19,7 @@ let mouseXPosition = 0;
 let mouseYPosition = 0;
 
 export const Start = () => {
+  const theme = useTheme();
   const [cursorVariant, setCursorVariant] = useState('default');
   const ref = useRef(null);
   const mouse = useMouse(ref, {
@@ -95,10 +97,8 @@ export const Start = () => {
           <div css={{ display: 'flex', gap: 16, alignItems: 'flex-end' }}>
             <span
               css={{
-                fontSize: 84,
+                ...theme.text.medium1200,
                 color: '#101111',
-                fontWeight: 600,
-                lineHeight: '88px',
                 label: 'title',
               }}
             >

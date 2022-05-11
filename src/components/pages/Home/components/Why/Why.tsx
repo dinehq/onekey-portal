@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import { FreeMode } from 'swiper';
 
+import { theme } from '../../../../../theme';
 import { Swiper, SwiperSlide } from '../../../../base';
 
 import { Arrow } from './Arrow';
@@ -35,7 +36,7 @@ export const Why: FC = () => {
             paddingRight: 64,
           }}
         >
-          <span css={{ fontSize: 48, color: '#101111' }}>
+          <span css={{ ...theme.text.medium900, color: '#101111' }}>
             Why Choose OneKey
           </span>
 
