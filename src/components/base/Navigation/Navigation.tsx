@@ -28,6 +28,7 @@ export const Navigation: FC<NavigationProps> = () => {
       xs={{
         position: 'fixed',
         width: '100%',
+        zIndex: 200,
         top: 0,
         left: 0,
         right: 0,
@@ -81,7 +82,7 @@ export const Navigation: FC<NavigationProps> = () => {
                 src={languageIcon}
                 css={{ width: 24, height: 24 }}
               />
-              <NavigationItem>English</NavigationItem>
+              <NavigationItem>EN</NavigationItem>
             </Box>
 
             <Button

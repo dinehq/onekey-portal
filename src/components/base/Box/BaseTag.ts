@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, HTMLProps } from 'react';
 
 import { jsx } from '@emotion/react';
 
@@ -27,3 +27,4 @@ export const Hr: FC<BoxProps> = factory('hr');
 export const Ul: FC<BoxProps> = factory('ul');
 export const Ol: FC<BoxProps> = factory('ol');
 export const Li: FC<BoxProps> = factory('li');
+export const Img: FC<BoxProps & HTMLProps<HTMLImageElement>> = factory('img');

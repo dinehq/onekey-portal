@@ -1,7 +1,8 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
 
 import { motion } from 'framer-motion';
 
+import { useHover } from '../../../../hooks';
 import { Box } from '../../Box';
 
 import { LeftArea } from './LeftArea';
@@ -12,25 +13,61 @@ export interface ProductPanelProps {
   isActive: boolean;
 }
 
+const container = {
+  hidden: { height: 0 },
+  visible: {
+    height: 'fit-content',
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 export const ProductPanel: FC<ProductPanelProps> = (props) => {
   const { children, isActive } = props;
+  const { hoverProps, isHovered } = useHover();
+  const [cursorVariant, setCursorVariant] = useState('hidden');
+
+  useEffect(() => {
+    if (isHovered || isActive) {
+      setCursorVariant('visible');
+    } else {
+      setCursorVariant('hidden');
+    }
+  }, [isHovered, isActive]);
 
   return (
     <motion.div
+      initial="hidden"
+      variants={container}
+      animate={cursorVariant}
       style={{
-        backgroundColor: isActive ? '#fff' : '#fafafa',
-        position: 'absolute',
-        left: 0,
-        top: 200,
         width: '100%',
-        right: 0,
-        height: isActive ? '20vh' : 0,
         overflow: 'hidden',
       }}
     >
-      <Box>
-        <LeftArea />
-        <RightArea />
+      <Box
+        {...hoverProps}
+        xs={{
+          display: 'flex',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Box
+          xs={{
+            flex: 1,
+          }}
+        >
+          <LeftArea />
+        </Box>
+        <Box
+          xs={{
+            width: '33%',
+          }}
+        >
+          <RightArea />
+        </Box>
       </Box>
       {children}
     </motion.div>

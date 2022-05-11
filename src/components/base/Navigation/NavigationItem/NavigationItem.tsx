@@ -16,8 +16,9 @@ export const NavigationItem: FC<NavigationItemProps> = (props) => {
     <Box
       {...otherProps}
       xs={{
-        color: theme.background.test500,
         ...theme.text.medium300,
+        color: theme.background.test500,
+        cursor: 'pointer',
         ':hover': {
           opacity: 0.5,
         },

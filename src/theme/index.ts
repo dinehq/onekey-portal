@@ -23,14 +23,140 @@ export const theme = {
   },
   background: {
     test100: 'linear-gradient(0deg, #F0F1F2, #F0F1F2), #EEEEEE',
+    test300: '#8A9195',
     test500: '#101111',
   },
   gradients: {},
   text: {
+    medium100: {
+      fontWeight: 600,
+      fontSize: 12,
+      lineHeight: '15px',
+    },
+    medium200: {
+      fontWeight: 600,
+      fontSize: 14,
+      lineHeight: '17px',
+    },
     medium300: {
       fontWeight: 600,
       fontSize: 16,
       lineHeight: '20px',
+    },
+    medium400: {
+      fontWeight: 600,
+      fontSize: 18,
+      lineHeight: '24px',
+    },
+    medium500: {
+      fontWeight: 600,
+      fontSize: 20,
+      lineHeight: '26px',
+    },
+    medium600: {
+      fontWeight: 600,
+      fontSize: 24,
+      lineHeight: '30px',
+    },
+    medium700: {
+      fontWeight: 600,
+      fontSize: 30,
+      lineHeight: '36px',
+    },
+    medium800: {
+      fontWeight: 600,
+      fontSize: 40,
+      lineHeight: '46px',
+    },
+    medium900: {
+      fontWeight: 600,
+      fontSize: 52,
+      lineHeight: '56px',
+    },
+    medium1000: {
+      fontWeight: 600,
+      fontSize: 60,
+      lineHeight: '64px',
+    },
+    medium1100: {
+      fontWeight: 600,
+      fontSize: 72,
+      lineHeight: '76px',
+    },
+    medium1200: {
+      fontWeight: 600,
+      fontSize: 84,
+      lineHeight: '88px',
+    },
+    medium1300: {
+      fontWeight: 600,
+      fontSize: 96,
+      lineHeight: '100px',
+    },
+    normal100: {
+      fontWeight: 400,
+      fontSize: 12,
+      lineHeight: '15px',
+    },
+    normal200: {
+      fontWeight: 400,
+      fontSize: 14,
+      lineHeight: '17px',
+    },
+    normal300: {
+      fontWeight: 400,
+      fontSize: 16,
+      lineHeight: '20px',
+    },
+    normal400: {
+      fontWeight: 400,
+      fontSize: 18,
+      lineHeight: '24px',
+    },
+    normal500: {
+      fontWeight: 400,
+      fontSize: 20,
+      lineHeight: '26px',
+    },
+    normal600: {
+      fontWeight: 400,
+      fontSize: 24,
+      lineHeight: '30px',
+    },
+    normal700: {
+      fontWeight: 400,
+      fontSize: 30,
+      lineHeight: '36px',
+    },
+    normal800: {
+      fontWeight: 400,
+      fontSize: 40,
+      lineHeight: '46px',
+    },
+    normal900: {
+      fontWeight: 400,
+      fontSize: 52,
+      lineHeight: '56px',
+    },
+    normal1000: {
+      fontWeight: 400,
+      fontSize: 60,
+      lineHeight: '64px',
+    },
+    normal1100: {
+      fontWeight: 400,
+      fontSize: 72,
+      lineHeight: '76px',
+    },
+    normal1200: {
+      fontWeight: 400,
+      fontSize: 84,
+      lineHeight: '88px',
+    },
+    normal1300: {
+      fontWeight: 400,
+      fontSize: 96,
+      lineHeight: '100px',
     },
   },
   font: {
