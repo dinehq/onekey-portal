@@ -1,14 +1,16 @@
 import { FC } from 'react';
 
+import { useTheme } from '@emotion/react';
 import { motion } from 'framer-motion';
 
 import { usePositionAnimation } from '../../../../../hooks';
 import { mergeRefs } from '../../../../../utils';
-import { Box, Button, Container, Flex } from '../../../../base';
+import { Box, Button, Container, Flex, Logo, Span } from '../../../../base';
 
 import backgroundImage from './background.jpg';
 
 export const Header: FC = () => {
+  const theme = useTheme();
   const { ref: paddingRef, motionValue: paddingMotionValue } =
     usePositionAnimation({
       defaultProgress: 1,
@@ -72,9 +74,7 @@ export const Header: FC = () => {
             >
               <h1
                 css={{
-                  fontSize: `${(60 / 1920) * 100}vw`,
-                  fontWeight: 600,
-                  lineHeight: 1.3,
+                  ...theme.text.medium1000,
                   color: '#101111',
                 }}
               >
@@ -83,13 +83,24 @@ export const Header: FC = () => {
                 Trusted by Millions.
               </h1>
               <Flex {...{ gap: 20 }}>
-                <Button>Launch App</Button>
+                <Button
+                  rightIcon={
+                    <Logo
+                      css={{
+                        width: 26,
+                        height: 26,
+                      }}
+                    />
+                  }
+                >
+                  Launch App
+                </Button>
                 <Button variant="outline">Go to shop</Button>
               </Flex>
 
-              <span css={{ fontSize: 12, color: '#101111' }}>
+              <Span xs={{ ...theme.text.normal200 }}>
                 Trustpilot score & review
-              </span>
+              </Span>
             </Flex>
           </Container>
         </Box>

@@ -1,6 +1,7 @@
 import { FC, ReactNode, useCallback, useState } from 'react';
 
 import { useTheme } from '@emotion/react';
+import { motion } from 'framer-motion';
 
 import { Box, Img, Li, Ul } from '../../Box';
 
@@ -17,6 +18,14 @@ const items = [
   'OneKey Lite',
   'KeyTag',
 ];
+
+const itemVariants = {
+  hidden: { y: 10, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 export const LeftArea: FC<LeftAreaProps> = (props) => {
   const { children } = props;
@@ -69,7 +78,9 @@ export const LeftArea: FC<LeftAreaProps> = (props) => {
               key={index}
               onClick={() => onClick(item)}
             >
-              {item}
+              <motion.div key={index} variants={itemVariants}>
+                {item}
+              </motion.div>
             </Li>
           ))}
         </Ul>

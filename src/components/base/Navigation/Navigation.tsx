@@ -61,17 +61,18 @@ export const Navigation: FC<NavigationProps> = () => {
           <Ul xs={{ display: 'flex', gap: 32, alignItems: 'center' }}>
             {data.map((item) => (
               <Li
+                key={item.name}
                 xs={{
                   listStyle: 'none',
                 }}
               >
                 {item.link === '/products' ? (
-                  <NavigationItem {...hoverProps} key={item.name}>
+                  <NavigationItem {...hoverProps}>
                     {item.name}
                     {isHovered}
                   </NavigationItem>
                 ) : (
-                  <NavigationItem key={item.name}>{item.name}</NavigationItem>
+                  <NavigationItem>{item.name}</NavigationItem>
                 )}
               </Li>
             ))}

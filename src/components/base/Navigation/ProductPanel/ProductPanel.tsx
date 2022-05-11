@@ -14,19 +14,20 @@ export interface ProductPanelProps {
 }
 
 const container = {
-  hidden: { height: 0 },
+  hidden: { height: 0, opacity: 0 },
   visible: {
     height: 'fit-content',
+    opacity: 1,
     transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
+      delayChildren: 0.1,
+      staggerChildren: 0.08,
     },
   },
 };
 
 export const ProductPanel: FC<ProductPanelProps> = (props) => {
   const { children, isActive } = props;
-  const { hoverProps, isHovered } = useHover();
+  const { hoverProps, isHovered } = useHover({ timeout: 100 });
   const [cursorVariant, setCursorVariant] = useState('hidden');
 
   useEffect(() => {
