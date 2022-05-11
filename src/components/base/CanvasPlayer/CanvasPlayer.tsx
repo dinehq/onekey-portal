@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 
 import { AnimatedSprite, Application } from 'pixi.js';
 
@@ -22,7 +22,8 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   // animatedSprite ref
-  const animatedSpriteRef = useRef<AnimatedSprite | null>(null);
+  const [animatedSpriteState, setAnimatedSpriteState] =
+    useState<AnimatedSprite | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -40,8 +41,7 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
         ({ animatedSprite }) => {
           animatedSprite.gotoAndStop(0);
 
-          // @ts-ignore
-          animatedSpriteRef.current = animatedSprite;
+          setAnimatedSpriteState(animatedSprite);
         },
       );
     }
@@ -56,39 +56,18 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
 
   useEffect(() => {
     // application resize
-    if (application.current && animatedSpriteRef.current) {
+    if (application.current && animatedSpriteState) {
       application.current.renderer.resize(width, height);
-      animatedSpriteRef.current.width = width;
-      animatedSpriteRef.current.height = height;
+      animatedSpriteState.width = width;
+      animatedSpriteState.height = height;
     }
-  }, [width, height]);
+  }, [width, height, animatedSpriteState]);
 
   useEffect(() => {
-    const animatedSprite = animatedSpriteRef.current;
-
-    if (animatedSprite) {
-      animatedSprite.gotoAndStop(frame);
+    if (animatedSpriteState) {
+      animatedSpriteState.gotoAndStop(frame);
     }
-  }, [frame]);
+  }, [animatedSpriteState, frame]);
 
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
-    >
-      <canvas ref={canvasRef} />
-
-      {/* <button
-        type="button"
-        onClick={() => {
-          animatedSpriteRef.current?.gotoAndPlay(0);
-        }}
-      >
-        play
-      </button> */}
-    </div>
-  );
+  return <canvas ref={canvasRef} />;
 };
