@@ -1,8 +1,9 @@
 import { FC } from 'react';
 
+import { useTheme } from '@emotion/react';
 import { motion } from 'framer-motion';
 
-import { Box, Logo } from '../../../base';
+import { Logo, Section, Span } from '../../../base';
 
 const variants = {
   open: {
@@ -29,52 +30,55 @@ const itemVariants = {
   },
 };
 
-export const Slogan: FC = () => (
-  <Box
-    css={{
-      paddingTop: '16vh',
-      paddingBottom: '16vh',
-    }}
-  >
-    <motion.p
-      viewport={{ once: true }}
-      variants={variants}
-      whileInView="open"
-      initial="closed"
-      css={{
-        margin: '0 auto',
-        fontSize: `${(60 / 1400) * 100}vw`,
-        fontWeight: 600,
-        lineHeight: 1,
-        textAlign: 'center',
+export const Slogan: FC = () => {
+  const theme = useTheme();
+
+  return (
+    <Section
+      xs={{
+        paddingTop: '16vh',
+        paddingBottom: '16vh',
       }}
     >
-      <motion.span variants={itemVariants}>
-        <Logo
-          css={{
-            width: `${(64 / 1400) * 100}vw`,
-            height: `${(64 / 1400) * 100}vw`,
-            display: 'inline',
-            verticalAlign: 'bottom',
-            color: '#2EDB43',
-            marginRight: 6,
-          }}
-        />
-        <span
-          css={{
-            color: '#2EDB43',
-          }}
-        >
-          OneKey
-        </span>{' '}
-        is the smartest way
-      </motion.span>
-      <motion.span variants={itemVariants}>
-        to secure, buy, exchange and{' '}
-      </motion.span>
-      <motion.span variants={itemVariants}>
-        grow your crypto assets.
-      </motion.span>
-    </motion.p>
-  </Box>
-);
+      <motion.p
+        viewport={{ once: true }}
+        variants={variants}
+        whileInView="open"
+        initial="closed"
+        css={{
+          margin: '0 auto',
+          textAlign: 'center',
+          ...theme.text.medium1100,
+        }}
+      >
+        <motion.span variants={itemVariants}>
+          <Logo
+            css={{
+              width: 80,
+              height: 80,
+              display: 'inline',
+              verticalAlign: 'bottom',
+              color: '#2EDB43',
+              marginRight: 6,
+              ...theme.text.medium1100,
+            }}
+          />
+          <Span
+            xs={{
+              color: '#2EDB43',
+            }}
+          >
+            OneKey{' '}
+          </Span>
+          is the smartest way
+        </motion.span>
+        <motion.span variants={itemVariants}>
+          to secure, buy, exchange and{' '}
+        </motion.span>
+        <motion.span variants={itemVariants}>
+          grow your crypto assets.
+        </motion.span>
+      </motion.p>
+    </Section>
+  );
+};
