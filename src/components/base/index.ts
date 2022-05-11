@@ -8,3 +8,4 @@ export * from './Navigation';
 export * from './Logo';
 export * from './Marquee';
 export * from './RoundCursor';
+export * from './SEO';

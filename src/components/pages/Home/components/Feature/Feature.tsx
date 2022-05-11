@@ -20,7 +20,7 @@ export const Feature: FC<FeatureProps> = () => {
   const { ref, elementInViewportProgress } = useElementInViewportProgress(0);
   const motionValue = useTransform(
     elementInViewportProgress,
-    [0.3, 0.8],
+    [0.4, 0.8],
     [0, 29],
   );
   const data = useData();
