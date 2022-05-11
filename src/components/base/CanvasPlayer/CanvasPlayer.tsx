@@ -46,7 +46,12 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
       );
     }
 
-    return () => {};
+    return () => {
+      if (application.current) {
+        application.current.destroy();
+        application.current = null;
+      }
+    };
   }, [images, width, height]);
 
   useEffect(() => {
