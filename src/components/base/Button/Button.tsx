@@ -44,7 +44,7 @@ export const Button: FC<ButtonProps> = (props) => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '8px 16px',
+    padding: '12px 16px',
     fontStyle: 'normal',
     cursor: 'pointer',
     borderRadius: 100,

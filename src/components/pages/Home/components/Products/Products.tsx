@@ -9,6 +9,7 @@ import {
   Button,
   CanvasPlayer,
   Container,
+  Logo,
   Section,
   Span,
 } from '../../../../base';
@@ -55,7 +56,18 @@ export const Products: FC = () => {
                     </Span>
                   </div>
                   <Box>
-                    <Button>Launch App</Button>
+                    <Button
+                      rightIcon={
+                        <Logo
+                          css={{
+                            width: 26,
+                            height: 26,
+                          }}
+                        />
+                      }
+                    >
+                      Launch App
+                    </Button>
                   </Box>
                 </div>
 
