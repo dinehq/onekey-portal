@@ -29,8 +29,6 @@ export const Feature: FC<FeatureProps> = () => {
   const data = useData();
   const { width: windowWidth } = useWindowSize();
 
-  console.log(1);
-
   return (
     <Section
       xs={{
