@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 import { usePositionAnimation } from '../../../../../hooks';
 import { mergeRefs } from '../../../../../utils';
-import { Box, Button, Container, Flex, Logo, Span } from '../../../../base';
+import { Box, Button, Container, Flex, H1, Logo, Span } from '../../../../base';
 
 import backgroundImage from './background.jpg';
 
@@ -69,10 +69,10 @@ export const Header: FC = () => {
                 left: 0,
                 bottom: 0,
                 flexDirection: 'column',
-                gap: 20,
+                gap: 24,
               }}
             >
-              <h1
+              <H1
                 css={{
                   ...theme.text.medium1000,
                   color: '#101111',
@@ -81,7 +81,7 @@ export const Header: FC = () => {
                 All-in-One Crypto Wallet.
                 <br />
                 Trusted by Millions.
-              </h1>
+              </H1>
               <Flex {...{ gap: 20 }}>
                 <Button
                   rightIcon={
@@ -98,7 +98,7 @@ export const Header: FC = () => {
                 <Button variant="outline">Go to shop</Button>
               </Flex>
 
-              <Span xs={{ ...theme.text.normal200 }}>
+              <Span xs={{ ...theme.text.normal100 }}>
                 Trustpilot score & review
               </Span>
             </Flex>

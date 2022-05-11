@@ -13,7 +13,7 @@ export const theme = {
     brand100: '#D7F4DA',
     brand200: '#A3E5A9',
     brand300: '#67D572',
-    brand400: '#33C641',
+    brand400: '#16D629',
     brand500: '#00B812',
     brand600: '#00930E',
     brand700: '#006F0B',
