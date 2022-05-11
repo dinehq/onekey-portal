@@ -1,6 +1,8 @@
 import { FC } from 'react';
 
-import { Box, Navigation, PageFooter } from '../../base';
+import { Helmet } from 'react-helmet';
+
+import { Box, Navigation, PageFooter, SEO } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
 import {
@@ -18,8 +20,13 @@ import {
 
 export const Home: FC = () => (
   <div>
-    <div
-      css={{
+    <Helmet>
+      <title>Onekey</title>
+      <SEO title="onekey" description="onekey" />
+    </Helmet>
+
+    <Box
+      xs={{
         position: 'absolute',
         top: 0,
         left: 0,
@@ -29,37 +36,39 @@ export const Home: FC = () => (
       }}
     >
       <Navigation />
-    </div>
+    </Box>
 
-    <Header />
+    <main>
+      <Header />
 
-    <FadeIn>
-      <LogoWall />
-    </FadeIn>
+      <FadeIn>
+        <LogoWall />
+      </FadeIn>
 
-    <FadeIn>
-      <Slogan />
-    </FadeIn>
+      <FadeIn>
+        <Slogan />
+      </FadeIn>
 
-    <FadeIn>
-      <Products />
-    </FadeIn>
+      <FadeIn>
+        <Products />
+      </FadeIn>
 
-    <FadeIn>
-      <Hardware />
-    </FadeIn>
+      <FadeIn>
+        <Hardware />
+      </FadeIn>
 
-    <FadeIn>
-      <Security />
-    </FadeIn>
+      <FadeIn>
+        <Security />
+      </FadeIn>
 
-    <Feature />
+      <Feature />
 
-    <Why />
+      <Why />
 
-    <FadeIn>
-      <Rewards />
-    </FadeIn>
+      <FadeIn>
+        <Rewards />
+      </FadeIn>
+    </main>
 
     <Box backgroundColor="#f0f1f2">
       <FadeIn>
