@@ -3,7 +3,10 @@ import { FC, ReactNode } from 'react';
 import { useTheme } from '@emotion/react';
 import { useTransform } from 'framer-motion';
 
-import { useElementInViewportProgress } from '../../../../../hooks/useElementInViewportProgress';
+import {
+  useElementInViewportProgress,
+  useWindowSize,
+} from '../../../../../hooks';
 import { Box, CanvasPlayer, Section } from '../../../../base';
 
 import { Header } from './Header';
@@ -24,6 +27,7 @@ export const Feature: FC<FeatureProps> = () => {
     [0, 29],
   );
   const data = useData();
+  const { width: windowWidth } = useWindowSize();
 
   return (
     <Section
@@ -62,8 +66,8 @@ export const Feature: FC<FeatureProps> = () => {
         >
           <CanvasPlayer
             frame={parseInt(motionValue.get().toFixed(0))}
-            width={2880}
-            height={960}
+            width={windowWidth || 0}
+            height={(960 / 2880) * (windowWidth || 0)}
             images={new Array(30)
               .fill('')
               .map(

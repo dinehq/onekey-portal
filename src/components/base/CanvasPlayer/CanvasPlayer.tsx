@@ -22,7 +22,7 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   // animatedSprite ref
-  const animatedSpriteRef = useRef<AnimatedSprite>(null);
+  const animatedSpriteRef = useRef<AnimatedSprite | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -48,11 +48,20 @@ export const CanvasPlayer: FC<CanvasPlayerProps> = (props) => {
 
     return () => {
       if (application.current) {
-        application.current.destroy();
-        application.current = null;
+        // application.current.destroy();
+        // application.current = null;
       }
     };
   }, [images, width, height]);
+
+  useEffect(() => {
+    // application resize
+    if (application.current && animatedSpriteRef.current) {
+      application.current.renderer.resize(width, height);
+      animatedSpriteRef.current.width = width;
+      animatedSpriteRef.current.height = height;
+    }
+  }, [width, height]);
 
   useEffect(() => {
     const animatedSprite = animatedSpriteRef.current;

@@ -81,8 +81,8 @@ export const Products: FC = () => {
                 }}
               >
                 <CanvasPlayer
-                  width={1288}
-                  height={1004}
+                  width={1288 / 2}
+                  height={1004 / 2}
                   images={new Array(60)
                     .fill(0)
                     .map((_, i) => `/canvas/image${i}.jpg`)}

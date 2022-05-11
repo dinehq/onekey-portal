@@ -21,8 +21,8 @@ export function init(
 
   const app = new Application({
     view: element,
-    width: width / 2,
-    height: height / 2,
+    width,
+    height,
     resolution: window.devicePixelRatio,
     autoDensity: true,
     antialias: true,
