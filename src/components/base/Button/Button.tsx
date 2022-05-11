@@ -132,9 +132,9 @@ export const Button: FC<ButtonProps> = (props) => {
 
   return (
     <Box as="button" css={buttonStyle} {...otherProps}>
-      {leftIcon && <Box marginRight={8}>{leftIcon}</Box>}
+      {leftIcon && <Box css={{ marginRight: 8 }}>{leftIcon}</Box>}
       {children}
-      {rightIcon && <Box marginLeft={8}>{rightIcon}</Box>}
+      {rightIcon && <Box css={{ marginLeft: 8 }}>{rightIcon}</Box>}
     </Box>
   );
 };

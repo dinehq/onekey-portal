@@ -2,7 +2,7 @@ export function useData() {
   return [
     {
       name: 'Product',
-      link: '/',
+      link: '/products',
     },
     {
       name: 'Community',

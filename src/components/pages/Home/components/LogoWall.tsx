@@ -6,7 +6,7 @@ import { FadeIn } from '../../../base/FadeIn';
 export const LogoWall: FC = () => (
   <FadeIn>
     <Box
-      {...{
+      xs={{
         width: '100%',
         overflow: 'hidden',
         textAlign: 'center',

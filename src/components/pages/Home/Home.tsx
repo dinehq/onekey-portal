@@ -70,7 +70,11 @@ export const Home: FC = () => (
       </FadeIn>
     </main>
 
-    <Box backgroundColor="#f0f1f2">
+    <Box
+      css={{
+        backgroundColor: '#f0f1f2',
+      }}
+    >
       <FadeIn>
         <Start />
       </FadeIn>

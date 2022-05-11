@@ -2,6 +2,7 @@ import { FC, ReactNode } from 'react';
 
 import { useTheme } from '@emotion/react';
 
+import { useHover } from '../../../hooks';
 import { Box, Li, Nav, Ul } from '../Box';
 import { Button } from '../Button';
 import { Container } from '../Container';
@@ -10,6 +11,7 @@ import { Logo } from '../Logo';
 import languageIcon from './images/language.svg';
 import { NavigationAnimationWrap } from './NavigationAnimationWrap';
 import { NavigationItem } from './NavigationItem';
+import { ProductPanel } from './ProductPanel';
 import { useData } from './useData';
 
 export interface NavigationProps {
@@ -19,6 +21,7 @@ export interface NavigationProps {
 export const Navigation: FC<NavigationProps> = () => {
   const theme = useTheme();
   const data = useData();
+  const { hoverProps, isHovered } = useHover();
 
   return (
     <Nav
@@ -61,7 +64,14 @@ export const Navigation: FC<NavigationProps> = () => {
                   listStyle: 'none',
                 }}
               >
-                <NavigationItem key={item.name}>{item.name}</NavigationItem>
+                {item.link === '/products' ? (
+                  <NavigationItem {...hoverProps} key={item.name}>
+                    {item.name}
+                    {isHovered}
+                  </NavigationItem>
+                ) : (
+                  <NavigationItem key={item.name}>{item.name}</NavigationItem>
+                )}
               </Li>
             ))}
 
@@ -90,6 +100,8 @@ export const Navigation: FC<NavigationProps> = () => {
           </Ul>
         </Container>
       </NavigationAnimationWrap>
+
+      <ProductPanel isActive={isHovered} />
     </Nav>
   );
 };

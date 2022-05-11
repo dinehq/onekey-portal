@@ -9,11 +9,12 @@ export interface NavigationItemProps {
 }
 
 export const NavigationItem: FC<NavigationItemProps> = (props) => {
-  const { children } = props;
+  const { children, ...otherProps } = props;
   const theme = useTheme();
 
   return (
     <Box
+      {...otherProps}
       xs={{
         color: theme.background.test500,
         ...theme.text.medium300,

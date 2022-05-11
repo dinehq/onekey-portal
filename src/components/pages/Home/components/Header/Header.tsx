@@ -42,7 +42,7 @@ export const Header: FC = () => {
         }}
       >
         <Box
-          {...{
+          xs={{
             height: '100%',
             paddingLeft: 64,
             paddingRight: 64,
