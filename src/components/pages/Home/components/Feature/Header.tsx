@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 
-import { Box } from '../../../../base';
+import { Box, Button, Logo } from '../../../../base';
 
 export interface HeaderProps {
   children?: ReactNode;
@@ -41,5 +41,20 @@ export const Header: FC<HeaderProps> = () => (
       Compatible with MetaMask and other wallets. DeFi and Mining also
       integrated.
     </span>
+
+    <Box>
+      <Button
+        rightIcon={
+          <Logo
+            css={{
+              width: 26,
+              height: 26,
+            }}
+          />
+        }
+      >
+        Launch App
+      </Button>
+    </Box>
   </Box>
 );
