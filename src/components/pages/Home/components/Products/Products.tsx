@@ -10,7 +10,6 @@ import {
   CanvasPlayer,
   Container,
   LaunchAppButton,
-  Logo,
   Section,
   Span,
 } from '../../../../base';

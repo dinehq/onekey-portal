@@ -26,7 +26,7 @@ export function init(
     resolution: window.devicePixelRatio,
     autoDensity: true,
     antialias: true,
-    transparent: false,
+    backgroundAlpha: 0,
   });
 
   // set black background
