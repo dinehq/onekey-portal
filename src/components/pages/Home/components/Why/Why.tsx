@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
-import { FreeMode } from 'swiper';
+import Swiper, { FreeMode, Navigation } from 'swiper';
 
 import { theme } from '../../../../../theme';
-import { Flex, Swiper, SwiperSlide } from '../../../../base';
+import { Flex, Swiper as SwiperComponent, SwiperSlide } from '../../../../base';
 
 import { Arrow } from './Arrow';
 import { Item } from './Item';
@@ -14,6 +14,7 @@ export const Why: FC = () => {
     width: 421,
   };
   const data = useData();
+  const [thumbsSwiper, setThumbsSwiper] = useState<Swiper>();
 
   return (
     <section>
@@ -42,8 +43,18 @@ export const Why: FC = () => {
 
           {/* controller */}
           <Flex gap={8}>
-            <Arrow direction="left" />
-            <Arrow direction="right" />
+            <Arrow
+              onClick={() => {
+                thumbsSwiper?.slidePrev();
+              }}
+              direction="left"
+            />
+            <Arrow
+              onClick={() => {
+                thumbsSwiper?.slideNext();
+              }}
+              direction="right"
+            />
           </Flex>
         </div>
         <div
@@ -52,10 +63,13 @@ export const Why: FC = () => {
             overflow: 'hidden',
           }}
         >
-          <Swiper
+          <SwiperComponent
+            onSwiper={(swiper) => {
+              setThumbsSwiper(swiper);
+            }}
             slidesPerView="auto"
             spaceBetween={0}
-            modules={[FreeMode]}
+            modules={[FreeMode, Navigation]}
             freeMode={{
               enabled: true,
             }}
@@ -65,7 +79,7 @@ export const Why: FC = () => {
                 <Item {...item} />
               </SwiperSlide>
             ))}
-          </Swiper>
+          </SwiperComponent>
         </div>
       </div>
     </section>

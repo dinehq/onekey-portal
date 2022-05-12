@@ -22,15 +22,18 @@ export const Arrow: FC<ArrowProps> = (props) => {
         width: 64,
         borderWidth: 1,
         borderStyle: 'solid',
-        borderColor: '#101111',
+        borderColor: theme.background.test500,
         borderRadius: 100,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         transition: theme.transitions.allEase,
+        opacity: 0.5,
         ':hover': {
           color: 'white',
           backgroundColor: '#101111',
+          borderColor: '#101111',
+          opacity: 1,
         },
       }}
     >
