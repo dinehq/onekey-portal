@@ -42,11 +42,23 @@ export const Products: FC = () => {
           <Box css={{ display: 'flex', gap: 200, flexGrow: 1 }}>
             {/* left */}
             <Box css={{ display: 'flex', gap: 24 }}>
-              <Progress />
+              <Box
+                xs={{
+                  marginRight: 30,
+                }}
+              >
+                <Progress />
+              </Box>
 
-              <Box css={{ display: 'flex', flexDirection: 'column', gap: 336 }}>
+              {/* item 1 */}
+              <Box>
                 <Box
-                  css={{ display: 'flex', flexDirection: 'column', gap: 24 }}
+                  css={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 24,
+                    height: 500,
+                  }}
                 >
                   <Box
                     css={{ display: 'flex', flexDirection: 'column', gap: 16 }}
@@ -65,8 +77,14 @@ export const Products: FC = () => {
                   </Box>
                 </Box>
 
+                {/* item2 */}
                 <Box
-                  css={{ display: 'flex', flexDirection: 'column', gap: 24 }}
+                  css={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 24,
+                    height: 500,
+                  }}
                 >
                   <Box
                     css={{ display: 'flex', flexDirection: 'column', gap: 8 }}
@@ -98,7 +116,7 @@ export const Products: FC = () => {
 
               <Box
                 css={{
-                  height: '100vh',
+                  height: '100%',
                   position: 'relative',
                 }}
               >
