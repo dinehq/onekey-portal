@@ -122,7 +122,7 @@ export const Button: FC<ButtonProps> = (props) => {
   }
 
   return (
-    <Box as="button" xs={buttonStyle} {...otherProps}>
+    <Box as="button" {...otherProps} xs={buttonStyle}>
       {leftIcon && <Box css={{ marginRight: 8 }}>{leftIcon}</Box>}
       {children}
       {rightIcon && <Box css={{ marginLeft: 8 }}>{rightIcon}</Box>}

@@ -10,3 +10,4 @@ export * from './Marquee';
 export * from './RoundCursor';
 export * from './SEO';
 export * from './Swiper';
+export * from './LaunchAppButton';

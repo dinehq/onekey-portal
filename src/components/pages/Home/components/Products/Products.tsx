@@ -9,6 +9,7 @@ import {
   Button,
   CanvasPlayer,
   Container,
+  LaunchAppButton,
   Logo,
   Section,
   Span,
@@ -26,7 +27,7 @@ export const Products: FC = () => {
   return (
     <Section>
       <Container>
-        <div
+        <Box
           css={{
             paddingLeft: 87,
             paddingRight: 87,
@@ -37,13 +38,13 @@ export const Products: FC = () => {
             position: 'relative',
           }}
         >
-          <div css={{ display: 'flex', gap: 200, flexGrow: 1 }}>
-            <div css={{ display: 'flex', gap: 24 }}>
-              <div css={{ display: 'flex', flexDirection: 'column', gap: 336 }}>
-                <div
+          <Box css={{ display: 'flex', gap: 200, flexGrow: 1 }}>
+            <Box css={{ display: 'flex', gap: 24 }}>
+              <Box css={{ display: 'flex', flexDirection: 'column', gap: 336 }}>
+                <Box
                   css={{ display: 'flex', flexDirection: 'column', gap: 24 }}
                 >
-                  <div
+                  <Box
                     css={{ display: 'flex', flexDirection: 'column', gap: 16 }}
                   >
                     <Span css={{ ...theme.text.medium900 }}>
@@ -54,27 +55,16 @@ export const Products: FC = () => {
                       assets in a secure and convenient manner. Each user's
                       assets are secured appropriately and stored locally.
                     </Span>
-                  </div>
-                  <Box>
-                    <Button
-                      rightIcon={
-                        <Logo
-                          css={{
-                            width: 26,
-                            height: 26,
-                          }}
-                        />
-                      }
-                    >
-                      Launch App
-                    </Button>
                   </Box>
-                </div>
+                  <Box>
+                    <LaunchAppButton />
+                  </Box>
+                </Box>
 
-                <div
+                <Box
                   css={{ display: 'flex', flexDirection: 'column', gap: 24 }}
                 >
-                  <div
+                  <Box
                     css={{ display: 'flex', flexDirection: 'column', gap: 8 }}
                   >
                     <Span css={{ ...theme.text.medium900 }}>
@@ -89,16 +79,16 @@ export const Products: FC = () => {
                       don't have to worry about the loss or theft of your mobile
                       phone.
                     </Span>
-                  </div>
+                  </Box>
 
                   <Box>
                     <Button variant="outline">Go to shop</Button>
                   </Box>
-                </div>
-              </div>
-            </div>
+                </Box>
+              </Box>
+            </Box>
 
-            <div ref={ref}>
+            <Box ref={ref}>
               <Box
                 css={{
                   height: '100vh',
@@ -125,9 +115,9 @@ export const Products: FC = () => {
                   />
                 </Box>
               </Box>
-            </div>
-          </div>
-        </div>
+            </Box>
+          </Box>
+        </Box>
       </Container>
     </Section>
   );

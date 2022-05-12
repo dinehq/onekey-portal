@@ -1,12 +1,12 @@
-import { CSSProperties, FC, HTMLProps } from 'react';
+import { FC, HTMLProps } from 'react';
 
-import { Interpolation, Theme, jsx } from '@emotion/react';
+import { CSSObject, Interpolation, Theme, jsx } from '@emotion/react';
 
 export interface BoxProps extends HTMLProps<HTMLElement> {
   children?: React.ReactNode;
   as?: string;
-  css?: Interpolation<Theme> | CSSProperties;
-  xs?: Interpolation<Theme> | CSSProperties;
+  css?: Interpolation<Theme> | CSSObject;
+  xs?: Interpolation<Theme> | CSSObject;
 }
 
 export const Box: FC<BoxProps> = (props) => {
