@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { useTheme } from '@emotion/react';
+
 import { Box } from '../../../../base';
 
 export interface ItemProps {
@@ -10,6 +12,8 @@ export interface ItemProps {
 
 export const Item: FC<ItemProps> = (props) => {
   const { image, title, description } = props;
+  const theme = useTheme();
+
   return (
     <Box
       xs={{
@@ -22,15 +26,13 @@ export const Item: FC<ItemProps> = (props) => {
           flexDirection: 'column',
           gap: 16,
           textAlign: 'center',
-          maxWidth: 500,
+          maxWidth: 581,
           margin: '0 auto',
         }}
       >
         <span
           css={{
-            fontSize: 40,
-            fontWeight: 600,
-            lineHeight: '46px',
+            ...theme.text.medium900,
             color: '#101111',
           }}
         >
@@ -38,9 +40,7 @@ export const Item: FC<ItemProps> = (props) => {
         </span>
         <span
           css={{
-            fontSize: 18,
-            fontWeight: 300,
-            lineHeight: '24px',
+            ...theme.text.normal500,
             color: '#101111',
           }}
         >
