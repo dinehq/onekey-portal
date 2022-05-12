@@ -7,7 +7,7 @@ import { Logo, Section, Span } from '../../../base';
 
 const variants = {
   open: {
-    transition: { staggerChildren: 0.2, delayChildren: 0.8 },
+    transition: { staggerChildren: 0.2, delayChildren: 0.2 },
   },
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
