@@ -4,8 +4,8 @@ import { useTheme } from '@emotion/react';
 
 import { useHover } from '../../../hooks';
 import { Box, Li, Nav, Ul } from '../Box';
-import { Button } from '../Button';
 import { Container } from '../Container';
+import { LaunchAppButton } from '../LaunchAppButton';
 import { Logo } from '../Logo';
 
 import languageIcon from './images/language.svg';
@@ -86,19 +86,7 @@ export const Navigation: FC<NavigationProps> = () => {
               <NavigationItem>EN</NavigationItem>
             </Box>
 
-            <Button
-              variant="outline"
-              rightIcon={
-                <Logo
-                  css={{
-                    width: 26,
-                    height: 26,
-                  }}
-                />
-              }
-            >
-              Launch App
-            </Button>
+            <LaunchAppButton variant="outline" />
           </Ul>
         </Container>
       </NavigationAnimationWrap>
