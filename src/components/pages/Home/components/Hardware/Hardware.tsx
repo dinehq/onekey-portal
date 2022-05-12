@@ -4,7 +4,7 @@ import { useTheme } from '@emotion/react';
 import { motion } from 'framer-motion';
 
 import { usePositionAnimation } from '../../../../../hooks';
-import { Box, Button, Container, Section } from '../../../../base';
+import { Box, Button, Container, Flex } from '../../../../base';
 
 import { Item } from './Item';
 import { useData } from './useData';
@@ -41,8 +41,8 @@ export const Hardware: FC = () => {
       >
         <Container>
           {/* header */}
-          <Box css={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-            <div css={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <Flex direction="column" gap={24}>
+            <Flex direction="column" gap={8}>
               <span
                 css={{
                   ...theme.text.medium600,
@@ -54,13 +54,13 @@ export const Hardware: FC = () => {
               <span css={{ ...theme.text.medium900, color: '#ffffff' }}>
                 Choose OneKey Hardware <br /> Wallet Right for You
               </span>
-            </div>
+            </Flex>
             <Box>
               <Button width={122} height={50}>
                 Go to Shop
               </Button>
             </Box>
-          </Box>
+          </Flex>
 
           {/* list */}
           <Box css={{ display: 'flex', gap: 81, paddingTop: 64 }}>
