@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Button, Container } from '../../../../base';
 
-import placeholderImage from './placeholder.png';
+import placeholderImage from './images/placeholder.png';
 
 export const Security: FC = () => (
   <section>
