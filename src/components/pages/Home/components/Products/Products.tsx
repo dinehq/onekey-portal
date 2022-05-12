@@ -14,6 +14,8 @@ import {
   Span,
 } from '../../../../base';
 
+import { Progress } from './Progress';
+
 export const Products: FC = () => {
   const theme = useTheme();
   const { ref, elementInViewportProgress } = useElementInViewportProgress(0);
@@ -38,7 +40,10 @@ export const Products: FC = () => {
           }}
         >
           <Box css={{ display: 'flex', gap: 200, flexGrow: 1 }}>
+            {/* left */}
             <Box css={{ display: 'flex', gap: 24 }}>
+              <Progress />
+
               <Box css={{ display: 'flex', flexDirection: 'column', gap: 336 }}>
                 <Box
                   css={{ display: 'flex', flexDirection: 'column', gap: 24 }}
@@ -87,6 +92,7 @@ export const Products: FC = () => {
               </Box>
             </Box>
 
+            {/* right */}
             <Box>
               <div ref={ref} />
 
