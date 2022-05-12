@@ -87,7 +87,9 @@ export const Products: FC = () => {
               </Box>
             </Box>
 
-            <Box ref={ref}>
+            <Box>
+              <div ref={ref} />
+
               <Box
                 css={{
                   height: '100vh',
