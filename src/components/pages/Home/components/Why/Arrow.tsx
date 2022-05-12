@@ -6,25 +6,27 @@ import { Box, BoxProps } from '../../../../base';
 
 export interface ArrowProps extends BoxProps {
   children?: ReactNode;
+  direction?: 'up' | 'down' | 'left' | 'right';
 }
 
 export const Arrow: FC<ArrowProps> = (props) => {
-  const { children, ...otherProps } = props;
+  const { children, direction, ...otherProps } = props;
   const theme = useTheme();
 
   return (
     <Box
       {...otherProps}
       css={{
+        cursor: 'pointer',
+        height: 64,
+        width: 64,
         borderWidth: 1,
         borderStyle: 'solid',
         borderColor: '#101111',
-        borderBottomLeftRadius: 999,
-        borderBottomRightRadius: 999,
-        borderTopLeftRadius: 999,
-        borderTopRightRadius: 999,
-        display: 'block',
-        label: 'Arrow',
+        borderRadius: 100,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         transition: theme.transitions.allEase,
         ':hover': {
           color: 'white',
@@ -32,19 +34,26 @@ export const Arrow: FC<ArrowProps> = (props) => {
         },
       }}
     >
-      <svg
-        width="64"
-        height="64"
-        viewBox="0 0 64 64"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+      <Box
+        css={{
+          transform: direction === 'right' ? 'rotate(0deg)' : 'rotate(-180deg)',
+        }}
       >
-        <path
-          d="M32.4944 21L21 32.5M21 32.5L32.4944 44M21 32.5H44"
-          stroke="#101111"
-          strokeWidth="2"
-        />
-      </svg>
+        <svg
+          width="25"
+          height="25"
+          viewBox="0 0 25 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M20.5866 11.4999L10.7983 1.70684L12.2129 0.292969L24.4139 12.4999L12.2129 24.7068L10.7983 23.293L20.5866 13.4999H0V11.4999H20.5866Z"
+            fill="currentColor"
+          />
+        </svg>
+      </Box>
 
       {children}
     </Box>
