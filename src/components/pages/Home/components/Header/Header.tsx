@@ -73,9 +73,14 @@ export const Header: FC = () => {
               }}
             >
               <H1
-                css={{
+                xs={{
+                  ...theme.text.medium800,
+                }}
+                xl={{
+                  ...theme.text.medium900,
+                }}
+                xxl={{
                   ...theme.text.medium1000,
-                  color: '#101111',
                 }}
               >
                 All-in-One Crypto Wallet.
