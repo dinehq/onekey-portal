@@ -3,6 +3,7 @@ export * from './Button';
 export * from './CanvasPlayer';
 export * from './Container';
 export * from './Flex';
+export * from './Hidden';
 export * from './PageFooter';
 export * from './Navigation';
 export * from './Logo';

@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
 
+import { useMediaQuery } from '../../../hooks';
 import { Box } from '../Box';
 
 import { MobileNavigation } from './MobileNavigation';
@@ -11,26 +12,11 @@ export interface NavigationProps {
 
 export const Navigation: FC<NavigationProps> = (props) => {
   const { children } = props;
+  const mediaQuery = useMediaQuery();
 
   return (
     <Box>
-      <Box
-        xs={{
-          display: 'none',
-        }}
-        l={{
-          display: 'block',
-        }}
-      >
-        <NormalNavigation />
-      </Box>
-      <Box
-        l={{
-          display: 'hidden',
-        }}
-      >
-        <MobileNavigation />
-      </Box>
+      {mediaQuery.large ? <NormalNavigation /> : <MobileNavigation />}
 
       {children}
     </Box>
