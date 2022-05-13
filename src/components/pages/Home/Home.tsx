@@ -5,18 +5,7 @@ import { Helmet } from 'react-helmet';
 import { Box, Main, Navigation, PageFooter, SEO } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
-import {
-  Feature,
-  Hardware,
-  Header,
-  LogoWall,
-  Products,
-  Rewards,
-  Security,
-  Slogan,
-  Start,
-  Why,
-} from './components';
+import { Header, LogoWall } from './components';
 
 export const Home: React.FC = () => (
   <>
@@ -34,7 +23,7 @@ export const Home: React.FC = () => (
         <LogoWall />
       </FadeIn>
 
-      <FadeIn>
+      {/* <FadeIn>
         <Slogan />
       </FadeIn>
 
@@ -56,7 +45,7 @@ export const Home: React.FC = () => (
 
       <FadeIn>
         <Rewards />
-      </FadeIn>
+      </FadeIn> */}
     </Main>
 
     <Box
@@ -64,9 +53,7 @@ export const Home: React.FC = () => (
         backgroundColor: '#f0f1f2',
       }}
     >
-      <FadeIn>
-        <Start />
-      </FadeIn>
+      <FadeIn>{/* <Start /> */}</FadeIn>
 
       <FadeIn>
         <PageFooter />
