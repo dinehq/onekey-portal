@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Helmet } from 'react-helmet';
 
-import { Box, Navigation, PageFooter, SEO } from '../../base';
+import { Box, Main, Navigation, PageFooter, SEO } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
 import {
@@ -19,7 +19,7 @@ import {
 } from './components';
 
 export const Home: FC = () => (
-  <div>
+  <>
     <Helmet>
       <title>Onekey</title>
       <SEO title="onekey" description="onekey" />
@@ -27,7 +27,7 @@ export const Home: FC = () => (
 
     <Navigation />
 
-    <main>
+    <Main>
       <Header />
 
       <FadeIn>
@@ -57,7 +57,7 @@ export const Home: FC = () => (
       <FadeIn>
         <Rewards />
       </FadeIn>
-    </main>
+    </Main>
 
     <Box
       css={{
@@ -72,5 +72,5 @@ export const Home: FC = () => (
         <PageFooter />
       </FadeIn>
     </Box>
-  </div>
+  </>
 );
