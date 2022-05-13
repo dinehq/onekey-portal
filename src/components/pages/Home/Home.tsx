@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React from 'react';
 
 import { Helmet } from 'react-helmet';
 
@@ -18,7 +18,7 @@ import {
   Why,
 } from './components';
 
-export const Home: FC = () => (
+export const Home: React.FC = () => (
   <>
     <Helmet>
       <title>Onekey</title>
