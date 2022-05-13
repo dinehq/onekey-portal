@@ -1,24 +1,37 @@
 import { FC, ReactNode } from 'react';
 
-import { Interpolation, Theme } from '@emotion/react';
-
 import { Box, BoxProps } from '../Box';
 
 export interface ContainerProps extends BoxProps {
   children?: ReactNode;
-  xs?: Interpolation<Theme>;
 }
 
 export const Container: FC<ContainerProps> = (props) => {
-  const { children, ...otherProps } = props;
+  const { children, ...externalProps } = props;
 
   return (
     <Box
-      css={{
-        maxWidth: 1608,
+      xs={{
         margin: '0 auto',
+        maxWidth: '100%',
+        padding: 24,
       }}
-      {...otherProps}
+      s={{
+        padding: 0,
+      }}
+      m={{
+        maxWidth: 960 - 32 * 2,
+      }}
+      l={{
+        maxWidth: 1220 - 48 * 2,
+      }}
+      xl={{
+        maxWidth: 1440 - 64 * 2,
+      }}
+      xxl={{
+        maxWidth: 1736 - 92 * 2,
+      }}
+      externalProps={externalProps}
     >
       {children}
     </Box>
