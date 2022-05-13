@@ -6,12 +6,24 @@
 
 import { useMediaQuery as useReactResponsiveMediaQuery } from 'react-responsive';
 
+import { mediaBreakpoints } from '../theme';
+
 export function useMediaQuery() {
-  const small = useReactResponsiveMediaQuery({ minWidth: 414 });
-  const medium = useReactResponsiveMediaQuery({ minWidth: 960 });
-  const large = useReactResponsiveMediaQuery({ minWidth: 1200 });
-  const xlarge = useReactResponsiveMediaQuery({ minWidth: 1440 });
-  const xxlarge = useReactResponsiveMediaQuery({ minWidth: 1920 });
+  const small = useReactResponsiveMediaQuery({
+    minWidth: mediaBreakpoints.small,
+  });
+  const medium = useReactResponsiveMediaQuery({
+    minWidth: mediaBreakpoints.medium,
+  });
+  const large = useReactResponsiveMediaQuery({
+    minWidth: mediaBreakpoints.large,
+  });
+  const xlarge = useReactResponsiveMediaQuery({
+    minWidth: mediaBreakpoints.xlarge,
+  });
+  const xxlarge = useReactResponsiveMediaQuery({
+    minWidth: mediaBreakpoints.xxlarge,
+  });
 
   return {
     small,

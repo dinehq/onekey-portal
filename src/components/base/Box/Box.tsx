@@ -3,6 +3,8 @@ import { FC, HTMLProps } from 'react';
 import { CSSObject, Interpolation, Theme, jsx } from '@emotion/react';
 import deepmerge from 'deepmerge';
 
+import { mediaBreakpoints } from '../../../theme';
+
 export interface ResponsiveStyleProps {
   xs?: Interpolation<Theme> | CSSObject;
   s?: Interpolation<Theme> | CSSObject;
@@ -47,11 +49,11 @@ export const Box: FC<BoxProps> = (props) => {
   const innerCSS = deepmerge.all([
     xs,
     {
-      [mq(414)]: s,
-      [mq(960)]: m,
-      [mq(1200)]: l,
-      [mq(1440)]: xl,
-      [mq(1920)]: xxl,
+      [mq(mediaBreakpoints.small)]: s,
+      [mq(mediaBreakpoints.medium)]: m,
+      [mq(mediaBreakpoints.large)]: l,
+      [mq(mediaBreakpoints.xlarge)]: xl,
+      [mq(mediaBreakpoints.xxlarge)]: xxl,
     },
     css,
     externalProps.css || {},

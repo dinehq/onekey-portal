@@ -209,26 +209,16 @@ export const theme = {
 export type MediaBreakpointsKey = keyof typeof mediaBreakpoints;
 
 export const mediaBreakpoints = {
-  mobile: 576,
-  tablet: 768,
-  laptop: 992,
-  desktop: 1400,
-  xxl: 1600,
-  xxxl: 1800,
+  small: 414,
+  medium: 960,
+  large: 1200,
+  xlarge: 1440,
+  xxlarge: 1920,
 };
 
 export const mediaBreakpointsKeys = Object.keys(
   mediaBreakpoints,
 ) as MediaBreakpointsKey[];
-
-export const containerMaxWidth = {
-  sm: 540,
-  md: 720,
-  lg: 1200,
-  xl: 1300,
-  xxl: 1400,
-  xxxl: 1500,
-};
 
 export const LanguageMap = {
   zh: '中文',
