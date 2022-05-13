@@ -20,6 +20,8 @@ export const Why: FC = () => {
     <section>
       <div
         css={{
+          position: 'relative',
+          zIndex: 1,
           paddingTop: 64,
           paddingBottom: 64,
           backgroundColor: '#ffffff',

@@ -25,18 +25,7 @@ export const Home: FC = () => (
       <SEO title="onekey" description="onekey" />
     </Helmet>
 
-    <Box
-      xs={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: 'fit-content',
-        zIndex: 1,
-      }}
-    >
-      <Navigation />
-    </Box>
+    <Navigation />
 
     <main>
       <Header />

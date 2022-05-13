@@ -28,7 +28,7 @@ export const Navigation: FC<NavigationProps> = () => {
       xs={{
         position: 'fixed',
         width: '100%',
-        zIndex: 200,
+        zIndex: 2000,
         top: 0,
         left: 0,
         right: 0,
