@@ -2,8 +2,8 @@ import { FC, ReactNode, useEffect, useState } from 'react';
 
 import { motion } from 'framer-motion';
 
-import { useHover } from '../../../../hooks';
-import { Box } from '../../Box';
+import { useHover } from '../../../../../hooks';
+import { Box } from '../../../Box';
 
 import { LeftArea } from './LeftArea';
 import { RightArea } from './RightArea';

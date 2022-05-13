@@ -3,7 +3,7 @@ import { FC, ReactNode, useCallback, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import { motion } from 'framer-motion';
 
-import { Box, Img, Li, Ul } from '../../Box';
+import { Box, Img, Li, Ul } from '../../../Box';
 
 import image from './images/product.png';
 

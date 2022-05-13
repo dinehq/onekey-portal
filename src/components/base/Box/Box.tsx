@@ -3,8 +3,7 @@ import { FC, HTMLProps } from 'react';
 import { CSSObject, Interpolation, Theme, jsx } from '@emotion/react';
 import deepmerge from 'deepmerge';
 
-export interface StyleProps {
-  css?: Interpolation<Theme> | CSSObject;
+export interface ResponsiveStyleProps {
   xs?: Interpolation<Theme> | CSSObject;
   s?: Interpolation<Theme> | CSSObject;
   m?: Interpolation<Theme> | CSSObject;
@@ -13,10 +12,18 @@ export interface StyleProps {
   xxl?: Interpolation<Theme> | CSSObject;
 }
 
+export type ResponsiveStyleKeys = keyof ResponsiveStyleProps;
+
+export interface StyleProps extends ResponsiveStyleProps {
+  css?: Interpolation<Theme> | CSSObject;
+}
+
 export interface BoxProps extends HTMLProps<HTMLElement>, StyleProps {
   children?: React.ReactNode;
   as?: string;
   externalProps?: StyleProps;
+  hiddenRange?: [ResponsiveStyleKeys, ResponsiveStyleKeys];
+  isMounted?: [ResponsiveStyleKeys, ResponsiveStyleKeys];
 }
 
 const mq = (bp: number) => `@media (min-width: ${bp}px)`;
@@ -33,6 +40,7 @@ export const Box: FC<BoxProps> = (props) => {
     xl = {},
     xxl = {},
     externalProps = {},
+    hiddenRange,
     ...otherProps
   } = props;
 

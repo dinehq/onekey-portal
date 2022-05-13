@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 
 import { useTheme } from '@emotion/react';
 
-import { Box, Span } from '../../Box';
+import { Box, Span } from '../../../Box';
 
 export interface RightAreaProps {
   children?: ReactNode;
