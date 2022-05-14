@@ -19,7 +19,7 @@ export const ResponsiveIndicator: FC<ResponsiveIndicatorProps> = (props) => {
     setIsHidden(true);
   };
 
-  if (isHidden) {
+  if (isHidden || process.env.NODE_ENV === 'production') {
     return null;
   }
 
@@ -43,6 +43,7 @@ export const ResponsiveIndicator: FC<ResponsiveIndicatorProps> = (props) => {
         left: 0,
         bottom: 0,
         background: 'white',
+        padding: '2px 4px',
       }}
     >
       {currentMediaQuery}
