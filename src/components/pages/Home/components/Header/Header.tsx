@@ -2,12 +2,11 @@ import { FC } from 'react';
 
 import { useTheme } from '@emotion/react';
 import { motion } from 'framer-motion';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import { usePositionAnimation } from '../../../../../hooks';
 import { mergeRefs } from '../../../../../utils';
 import { Box, Button, Container, Flex, H1, Logo, Span } from '../../../../base';
-
-import backgroundImage from './background.jpg';
 
 export const Header: FC = () => {
   const theme = useTheme();
@@ -45,20 +44,32 @@ export const Header: FC = () => {
       >
         <Box
           xs={{
+            position: 'relative',
             height: '100%',
             paddingLeft: 64,
             paddingRight: 64,
             paddingTop: 78,
             paddingBottom: 78,
             backgroundColor: '#e9e9e9',
-            backgroundImage: `url(${backgroundImage.toString()})`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
           }}
         >
+          <StaticImage
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              bottom: 0,
+              right: 0,
+              zIndex: 1,
+            }}
+            quality={100}
+            layout="constrained"
+            alt="background"
+            src="./background.jpg"
+          />
           <Container
             xs={{
+              zIndex: 2,
               height: '100%',
               position: 'relative',
             }}

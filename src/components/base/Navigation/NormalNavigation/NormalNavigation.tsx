@@ -9,6 +9,7 @@ import { LaunchAppButton } from '../../LaunchAppButton';
 import { Logo } from '../../Logo';
 import { useData } from '../useData';
 
+import languageSelectIcon from './images/language.svg';
 import { NavigationAnimationWrap } from './NavigationAnimationWrap';
 import { NavigationItem } from './NavigationItem';
 import { ProductPanel } from './ProductPanel';
@@ -79,7 +80,7 @@ export const NormalNavigation: FC<NormalNavigationProps> = () => {
             <Box css={{ display: 'flex', gap: 8, alignItems: 'center' }}>
               <img
                 alt="language select icon"
-                src="./images/language.svg"
+                src={languageSelectIcon}
                 css={{ width: 24, height: 24 }}
               />
               <NavigationItem>EN</NavigationItem>
