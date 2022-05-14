@@ -33,6 +33,7 @@ module.exports = {
         icon: 'src/images/icon.png',
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-less`
