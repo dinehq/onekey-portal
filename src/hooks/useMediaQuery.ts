@@ -18,10 +18,10 @@ export function useMediaQuery() {
   const large = useReactResponsiveMediaQuery({
     minWidth: mediaBreakpoints.large,
   });
-  const xlarge = useReactResponsiveMediaQuery({
+  const xLarge = useReactResponsiveMediaQuery({
     minWidth: mediaBreakpoints.xlarge,
   });
-  const xxlarge = useReactResponsiveMediaQuery({
+  const xxLarge = useReactResponsiveMediaQuery({
     minWidth: mediaBreakpoints.xxlarge,
   });
 
@@ -29,7 +29,7 @@ export function useMediaQuery() {
     small,
     medium,
     large,
-    xlarge,
-    xxlarge,
+    xLarge,
+    xxLarge,
   };
 }

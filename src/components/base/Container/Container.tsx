@@ -17,7 +17,7 @@ export const Container: FC<ContainerProps> = (props) => {
         padding: 24,
       }}
       s={{
-        padding: 0,
+        padding: 28,
       }}
       m={{
         maxWidth: 960 - 32 * 2,

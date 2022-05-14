@@ -4,6 +4,7 @@ import { ThemeProvider } from '@emotion/react';
 // eslint-disable-next-line import/no-unresolved
 import { ClickToComponent } from 'click-to-react-component';
 
+import { ResponsiveIndicator } from './components/base';
 import './style/global.less';
 import './style/stabilGroteskFont.less';
 import { theme } from './theme';
@@ -19,6 +20,7 @@ const WrapApp: WrapAppComponent = (props) => {
     <ThemeProvider theme={theme}>
       {children}
       <ClickToComponent />
+      <ResponsiveIndicator />
     </ThemeProvider>
   );
 };
