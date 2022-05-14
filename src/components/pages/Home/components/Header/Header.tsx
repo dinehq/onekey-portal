@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import { usePositionAnimation } from '../../../../../hooks';
-import { mergeRefs } from '../../../../../utils';
+import { dynamicTextStyle, mergeRefs } from '../../../../../utils';
 import { Box, Button, Container, Flex, H1, Logo, Span } from '../../../../base';
 
 export const Header: FC = () => {
@@ -88,7 +88,7 @@ export const Header: FC = () => {
                   ...theme.text.medium800,
                 }}
                 xl={{
-                  ...theme.text.medium900,
+                  ...dynamicTextStyle(theme.text.medium800, 'xlarge'),
                 }}
                 xxl={{
                   ...theme.text.medium1000,
