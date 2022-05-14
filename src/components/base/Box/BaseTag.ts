@@ -5,7 +5,9 @@ import { jsx } from '@emotion/react';
 import { Box, BoxProps } from './Box';
 
 function factory(as: string) {
-  return (props: BoxProps) => jsx(Box, { as, ...props });
+  const component = (props: BoxProps) => jsx(Box, { as, ...props });
+  component.displayName = `BaseTag ${as}`;
+  return component;
 }
 
 export const Section: FC<BoxProps> = factory('section');
