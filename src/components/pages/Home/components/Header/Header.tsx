@@ -46,8 +46,6 @@ export const Header: FC = () => {
           xs={{
             position: 'relative',
             height: '100%',
-            paddingLeft: 64,
-            paddingRight: 64,
             paddingTop: 78,
             paddingBottom: 78,
             backgroundColor: '#e9e9e9',

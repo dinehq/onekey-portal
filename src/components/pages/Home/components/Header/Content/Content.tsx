@@ -3,7 +3,7 @@ import { FC, ReactNode } from 'react';
 import { useTheme } from '@emotion/react';
 
 import { dynamicTextStyle } from '../../../../../../utils';
-import { Button, Container, Flex, H1, Logo, Span } from '../../../../../base';
+import { Box, Button, Container, H1, Logo, Span } from '../../../../../base';
 
 export interface ContentProps {
   children?: ReactNode;
@@ -18,13 +18,13 @@ export const Content: FC<ContentProps> = () => {
         zIndex: 2,
         height: '100%',
         position: 'relative',
+        display: 'flex',
+        alignItems: 'flex-end',
       }}
     >
-      <Flex
-        {...{
-          position: 'absolute',
-          left: 0,
-          bottom: 0,
+      <Box
+        xs={{
+          display: 'flex',
           flexDirection: 'column',
           gap: 24,
         }}
@@ -44,7 +44,16 @@ export const Content: FC<ContentProps> = () => {
           <br />
           Trusted by Millions.
         </H1>
-        <Flex {...{ gap: 20 }}>
+        <Box
+          xs={{
+            display: 'flex',
+            gap: 20,
+            flexDirection: 'column',
+          }}
+          m={{
+            flexDirection: 'row',
+          }}
+        >
           <Button
             rightIcon={
               <Logo
@@ -58,10 +67,10 @@ export const Content: FC<ContentProps> = () => {
             Launch App
           </Button>
           <Button variant="outline">Go to shop</Button>
-        </Flex>
+        </Box>
 
         <Span xs={{ ...theme.text.normal100 }}>Trustpilot score & review</Span>
-      </Flex>
+      </Box>
     </Container>
   );
 };
