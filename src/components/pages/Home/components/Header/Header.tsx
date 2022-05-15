@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 
 import { usePositionAnimation } from '../../../../../hooks';
 import { mergeRefs } from '../../../../../utils';
-import { Box, Container } from '../../../../base';
+import { Box } from '../../../../base';
 
 import { Background } from './Background';
+import { Content } from './Content';
 
 export const Header: FC = () => {
   const { ref: paddingRef, motionValue: paddingMotionValue } =
@@ -53,13 +54,8 @@ export const Header: FC = () => {
           }}
         >
           <Background />
-          <Container
-            xs={{
-              zIndex: 2,
-              height: '100%',
-              position: 'relative',
-            }}
-          />
+
+          <Content />
         </Box>
       </motion.div>
     </motion.div>
