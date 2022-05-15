@@ -48,8 +48,8 @@ export const NormalNavigation: FC<NormalNavigationProps> = () => {
         >
           <Logo
             css={{
-              width: 45,
-              height: 45,
+              width: 48,
+              height: 48,
               color: 'black',
               ':hover': {
                 cursor: 'pointer',
