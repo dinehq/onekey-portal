@@ -43,7 +43,10 @@ export const ResponsiveIndicator: FC<ResponsiveIndicatorProps> = (props) => {
         left: 0,
         bottom: 0,
         background: 'white',
-        padding: '2px 4px',
+        padding: '.3rem .6rem',
+        fontWeight: 'bold',
+        opacity: 0.8,
+        zIndex: 99999,
       }}
     >
       {currentMediaQuery}
