@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react';
 import React from 'react';
 
 import { Helmet } from 'react-helmet';
@@ -5,60 +6,66 @@ import { Helmet } from 'react-helmet';
 import { Box, Main, Navigation, PageFooter, SEO } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
-import { Header, LogoWall, Rewards, Slogan } from './components';
+import { Header, LogoWall, Rewards, Slogan, Start } from './components';
 
-export const Home: React.FC = () => (
-  <>
-    <Helmet>
-      <title>Onekey</title>
-      <SEO title="onekey" description="onekey" />
-    </Helmet>
+export const Home: React.FC = () => {
+  const theme = useTheme();
 
-    <Navigation />
+  return (
+    <>
+      <Helmet>
+        <title>Onekey</title>
+        <SEO title="onekey" description="onekey" />
+      </Helmet>
 
-    <Main>
-      <Header />
+      <Navigation />
 
-      <FadeIn>
-        <LogoWall />
-      </FadeIn>
+      <Main>
+        <Header />
 
-      <FadeIn>
-        <Slogan />
-      </FadeIn>
+        <FadeIn>
+          <LogoWall />
+        </FadeIn>
 
-      {/* 
-      <FadeIn>
-        <Products />
-      </FadeIn>
+        <FadeIn>
+          <Slogan />
+        </FadeIn>
 
-      <FadeIn>
-        <Hardware />
-      </FadeIn>
+        {/*
+            <FadeIn>
+              <Products />
+            </FadeIn>
+      
+            <FadeIn>
+              <Hardware />
+            </FadeIn>
+      
+            <FadeIn>
+              <Security />
+            </FadeIn>
+      
+            <Feature />
+      
+            <Why /> */}
 
-      <FadeIn>
-        <Security />
-      </FadeIn>
+        <FadeIn>
+          <Rewards />
+        </FadeIn>
+      </Main>
 
-      <Feature />
+      <Box
+        css={{
+          background: theme.background.test100,
+        }}
+      >
+        <FadeIn>
+          <Start />
+        </FadeIn>
 
-      <Why /> */}
-
-      <FadeIn>
-        <Rewards />
-      </FadeIn>
-    </Main>
-
-    <Box
-      css={{
-        backgroundColor: '#f0f1f2',
-      }}
-    >
-      <FadeIn>{/* <Start /> */}</FadeIn>
-
-      <FadeIn>
-        <PageFooter />
-      </FadeIn>
-    </Box>
-  </>
-);
+        <FadeIn>
+          <PageFooter />
+        </FadeIn>
+      </Box>
+    </>
+  );
+};
