@@ -2,11 +2,12 @@ import { FC } from 'react';
 
 import { useTheme } from '@emotion/react';
 import { motion } from 'framer-motion';
-import { StaticImage } from 'gatsby-plugin-image';
 
 import { usePositionAnimation } from '../../../../../hooks';
 import { dynamicTextStyle, mergeRefs } from '../../../../../utils';
 import { Box, Button, Container, Flex, H1, Logo, Span } from '../../../../base';
+
+import { Background } from './Background';
 
 export const Header: FC = () => {
   const theme = useTheme();
@@ -53,20 +54,7 @@ export const Header: FC = () => {
             backgroundColor: '#e9e9e9',
           }}
         >
-          <StaticImage
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              bottom: 0,
-              right: 0,
-              zIndex: 1,
-            }}
-            quality={100}
-            layout="constrained"
-            alt="background"
-            src="./background.jpg"
-          />
+          <Background />
           <Container
             xs={{
               zIndex: 2,
