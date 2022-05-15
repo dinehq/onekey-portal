@@ -1,16 +1,14 @@
 import { FC } from 'react';
 
-import { useTheme } from '@emotion/react';
 import { motion } from 'framer-motion';
 
 import { usePositionAnimation } from '../../../../../hooks';
-import { dynamicTextStyle, mergeRefs } from '../../../../../utils';
-import { Box, Button, Container, Flex, H1, Logo, Span } from '../../../../base';
+import { mergeRefs } from '../../../../../utils';
+import { Box, Container } from '../../../../base';
 
 import { Background } from './Background';
 
 export const Header: FC = () => {
-  const theme = useTheme();
   const { ref: paddingRef, motionValue: paddingMotionValue } =
     usePositionAnimation({
       defaultProgress: 1,
@@ -61,52 +59,7 @@ export const Header: FC = () => {
               height: '100%',
               position: 'relative',
             }}
-          >
-            <Flex
-              {...{
-                position: 'absolute',
-                left: 0,
-                bottom: 0,
-                flexDirection: 'column',
-                gap: 24,
-              }}
-            >
-              <H1
-                xs={{
-                  ...theme.text.medium800,
-                }}
-                xl={{
-                  ...dynamicTextStyle(theme.text.medium800, 'xlarge'),
-                }}
-                xxl={{
-                  ...theme.text.medium1000,
-                }}
-              >
-                All-in-One Crypto Wallet.
-                <br />
-                Trusted by Millions.
-              </H1>
-              <Flex {...{ gap: 20 }}>
-                <Button
-                  rightIcon={
-                    <Logo
-                      css={{
-                        width: 26,
-                        height: 26,
-                      }}
-                    />
-                  }
-                >
-                  Launch App
-                </Button>
-                <Button variant="outline">Go to shop</Button>
-              </Flex>
-
-              <Span xs={{ ...theme.text.normal100 }}>
-                Trustpilot score & review
-              </Span>
-            </Flex>
-          </Container>
+          />
         </Box>
       </motion.div>
     </motion.div>
