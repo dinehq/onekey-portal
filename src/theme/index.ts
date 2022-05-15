@@ -19,6 +19,7 @@ export const theme = {
     brand700: '#006F0B',
     brand800: '#005809',
     brand900: '#004206',
+    white: '#FFFFFF',
     transparent: 'transparent',
   },
   background: {
