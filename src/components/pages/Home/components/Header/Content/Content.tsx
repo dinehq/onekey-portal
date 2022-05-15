@@ -50,7 +50,7 @@ export const Content: FC<ContentProps> = () => {
             gap: 20,
             flexDirection: 'column',
           }}
-          m={{
+          s={{
             flexDirection: 'row',
           }}
         >
