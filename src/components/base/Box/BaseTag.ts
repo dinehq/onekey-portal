@@ -6,7 +6,11 @@ import { Box, BoxProps } from './Box';
 
 function factory(as: string) {
   const component = (props: BoxProps) => jsx(Box, { as, ...props });
-  component.displayName = `BaseTag ${as}`;
+
+  if (process.env.NODE_ENV === 'development') {
+    component.displayName = `BaseTag ${as}`;
+  }
+
   return component;
 }
 

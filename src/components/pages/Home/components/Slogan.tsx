@@ -3,7 +3,6 @@ import { FC } from 'react';
 import { useTheme } from '@emotion/react';
 import { motion } from 'framer-motion';
 
-import { dynamicTextStyle } from '../../../../utils';
 import { Box, Logo, Section, Span } from '../../../base';
 
 const variants = {
@@ -46,11 +45,14 @@ export const Slogan: FC = () => {
           textAlign: 'center',
           ...theme.text.medium800,
         }}
+        m={{
+          ...theme.text.medium900,
+        }}
         l={{
-          ...dynamicTextStyle(theme.text.medium900, 'large'),
+          ...theme.text.medium900,
         }}
         xl={{
-          ...dynamicTextStyle(theme.text.medium1000, 'xlarge'),
+          ...theme.text.medium1000,
         }}
         xxl={{
           ...theme.text.medium1100,
@@ -63,22 +65,34 @@ export const Slogan: FC = () => {
           initial="closed"
         >
           <motion.span variants={itemVariants}>
-            <Logo
-              css={{
-                width: 80,
-                height: 80,
-                display: 'inline',
-                verticalAlign: 'bottom',
-                color: '#2EDB43',
-                marginRight: 6,
-                ...theme.text.medium1100,
-              }}
-            />
             <Span
               xs={{
                 color: '#2EDB43',
               }}
             >
+              <Logo
+                s={{
+                  width: 48,
+                  height: 48,
+                }}
+                m={{
+                  width: 56,
+                  height: 56,
+                }}
+                xl={{
+                  width: 64,
+                  height: 64,
+                }}
+                xxl={{
+                  width: 72,
+                  height: 72,
+                }}
+                css={{
+                  display: 'inline-block',
+                  verticalAlign: 'bottom',
+                  marginRight: 6,
+                }}
+              />
               OneKey{' '}
             </Span>
             is the smartest way
