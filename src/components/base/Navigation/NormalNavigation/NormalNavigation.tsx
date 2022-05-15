@@ -1,16 +1,16 @@
-import { FC, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 import { useTheme } from '@emotion/react';
 
 import { useHover } from '../../../../hooks';
-import { Box, Li, Nav, Ul } from '../../Box';
+import { Box, Li, Ul } from '../../Box';
 import { Container } from '../../Container';
 import { LaunchAppButton } from '../../LaunchAppButton';
 import { Logo } from '../../Logo';
+import { NavigationAnimationWrap } from '../NavigationAnimationWrap';
 import { useData } from '../useData';
 
 import languageSelectIcon from './images/language.svg';
-import { NavigationAnimationWrap } from './NavigationAnimationWrap';
 import { NavigationItem } from './NavigationItem';
 import { ProductPanel } from './ProductPanel';
 
@@ -18,26 +18,13 @@ export interface NormalNavigationProps {
   children?: ReactNode;
 }
 
-export const NormalNavigation: FC<NormalNavigationProps> = () => {
+export const NormalNavigation: React.FC<NormalNavigationProps> = () => {
   const theme = useTheme();
   const data = useData();
   const { hoverProps, isHovered } = useHover();
 
   return (
-    <Nav
-      xs={{
-        position: 'fixed',
-        width: '100%',
-        zIndex: 2000,
-        top: 0,
-        left: 0,
-        right: 0,
-        transition: 'all 0.3s ease-in-out',
-        ':hover': {
-          backgroundColor: 'white',
-        },
-      }}
-    >
+    <>
       <NavigationAnimationWrap>
         <Container
           xs={{
@@ -92,6 +79,6 @@ export const NormalNavigation: FC<NormalNavigationProps> = () => {
       </NavigationAnimationWrap>
 
       <ProductPanel isActive={isHovered} />
-    </Nav>
+    </>
   );
 };

@@ -14,10 +14,12 @@ export const Container: FC<ContainerProps> = (props) => {
       xs={{
         margin: '0 auto',
         maxWidth: '100%',
-        padding: 24,
+        paddingLeft: 24,
+        paddingRight: 24,
       }}
       s={{
-        padding: 28,
+        paddingLeft: 28,
+        paddingRight: 28,
       }}
       m={{
         padding: 0,
