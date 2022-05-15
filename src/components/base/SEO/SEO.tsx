@@ -19,7 +19,7 @@ export const SEO: FC<SEOProps> = (props) => {
     title,
     description,
     keywords,
-    image = `https://xxx/images/og-image.jpg`,
+    image = `https://portal.onekey.so/og/og.jpg`,
     url = isBrowser() ? window.location.href : '',
     twitterUsername = 'null',
     isArticle = false,

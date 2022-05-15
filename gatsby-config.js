@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://google.com',
-    title: 'title',
-    description: 'description',
+    siteUrl: 'https://portal.onekey.so',
+    title: 'onekey',
+    description: 'onekey',
     url: 'url',
     image: 'image',
     twitterUsername: 'twitterUsername',
