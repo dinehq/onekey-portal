@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet';
 
-import { Box, Main, Navigation, PageFooter, SEO } from '../../base';
+import { Box, Main, Navigation, SEO } from '../../base';
 import { FadeIn } from '../../base/FadeIn';
 
 import { Header, LogoWall, Slogan } from './components';
@@ -56,9 +56,7 @@ export const Home: React.FC = () => (
     >
       <FadeIn>{/* <Start /> */}</FadeIn>
 
-      <FadeIn>
-        <PageFooter />
-      </FadeIn>
+      <FadeIn>{/* <PageFooter /> */}</FadeIn>
     </Box>
   </>
 );
