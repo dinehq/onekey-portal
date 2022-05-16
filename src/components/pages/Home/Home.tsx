@@ -58,9 +58,7 @@ export const Home: React.FC = () => {
           background: theme.background.test100,
         }}
       >
-        <FadeIn>
-          <Start />
-        </FadeIn>
+        <FadeIn>{/* <Start /> */}</FadeIn>
 
         <FadeIn>
           <PageFooter />
